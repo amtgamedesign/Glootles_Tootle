@@ -26,7 +26,12 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // horizontal input axis, so this is both a d and arrow keys
+        // swap control from axes to instead key presses
+        // instead i dont want to check the axis, i want to know if a has been pressed or d
+        // and then move a leg accrodingly
+        // similarly
+        // check if right and left arrow have been pressed, and move the other leg accordingly
         if(Input.GetAxisRaw("Horizontal") != 0)
         {
             if(Input.GetAxis("Horizontal") > 0)
