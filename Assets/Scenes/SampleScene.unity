@@ -225,7 +225,7 @@ MonoBehaviour:
   targetRotation: 0
   rb: {fileID: 0}
   force: 30
-  BalanceScript: {fileID: 0}
+  BalanceScript: {fileID: 245236815}
 --- !u!1 &262384753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
@@ -278,8 +278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftLeg: {fileID: 1811791003}
   rightLeg: {fileID: 1811791007}
-  leftLegRB: {fileID: 0}
-  rightLegRB: {fileID: 0}
+  leftLegRB: {fileID: 733073873}
+  rightLegRB: {fileID: 163193221}
   speed: 1
   jumpHeight: 2
   legWait: 1
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 0}
+  BalanceScript: {fileID: 245236815}
 --- !u!233 &1121641132
 HingeJoint2D:
   m_ObjectHideFlags: 0
