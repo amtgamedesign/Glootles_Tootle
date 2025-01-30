@@ -289,12 +289,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811791003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BalanceScript: {fileID: 1832332421}
+  balULL: {fileID: 0}
+  balLLL: {fileID: 0}
+  balbody: {fileID: 0}
+  balURR: {fileID: 0}
+  balLRR: {fileID: 0}
+  balhead: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +503,7 @@ GameObject:
   - component: {fileID: 660697653}
   - component: {fileID: 660697652}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,12 +948,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811791010}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BalanceScript: {fileID: 245236815}
+  balULL: {fileID: 0}
+  balLLL: {fileID: 0}
+  balbody: {fileID: 0}
+  balURR: {fileID: 0}
+  balLRR: {fileID: 0}
+  balhead: {fileID: 0}
 --- !u!233 &1121641132
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1035,6 +1047,159 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1331031285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331031288}
+  - component: {fileID: 1331031287}
+  - component: {fileID: 1331031286}
+  - component: {fileID: 1331031289}
+  m_Layer: 0
+  m_Name: Triangle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1331031286
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331031285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5773587}
+      - {x: -0.5, y: -0.28866667}
+      - {x: 0.5, y: -0.28866667}
+  m_UseDelaunayMesh: 0
+--- !u!212 &1331031287
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331031285}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1331031288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331031285}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7000845, w: 0.71406}
+  m_LocalPosition: {x: 5.61352, y: -1.1551818, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 88.868}
+--- !u!114 &1331031289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331031285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BalanceScript: {fileID: 2067223291}
+  balULL: {fileID: 1832332421}
+  balLLL: {fileID: 1811791021}
+  balbody: {fileID: 2067223291}
+  balURR: {fileID: 1989655767}
+  balLRR: {fileID: 1828378152}
+  balhead: {fileID: 245236815}
 --- !u!233 &1804210579
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1994,12 +2159,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811791009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BalanceScript: {fileID: 1811791021}
+  balULL: {fileID: 0}
+  balLLL: {fileID: 0}
+  balbody: {fileID: 0}
+  balURR: {fileID: 0}
+  balLRR: {fileID: 0}
+  balhead: {fileID: 0}
 --- !u!114 &1828378149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2007,12 +2178,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811791008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BalanceScript: {fileID: 1828378152}
+  balULL: {fileID: 0}
+  balLLL: {fileID: 0}
+  balbody: {fileID: 0}
+  balURR: {fileID: 0}
+  balLRR: {fileID: 0}
+  balhead: {fileID: 0}
 --- !u!114 &1828378152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,12 +2332,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811791007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BalanceScript: {fileID: 1989655767}
+  balULL: {fileID: 0}
+  balLLL: {fileID: 0}
+  balbody: {fileID: 0}
+  balURR: {fileID: 0}
+  balLRR: {fileID: 0}
+  balhead: {fileID: 0}
 --- !u!233 &2060406726
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -2271,12 +2454,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811791002}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BalanceScript: {fileID: 2067223291}
+  balULL: {fileID: 0}
+  balLLL: {fileID: 0}
+  balbody: {fileID: 0}
+  balURR: {fileID: 0}
+  balLRR: {fileID: 0}
+  balhead: {fileID: 0}
 --- !u!4 &2067223296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1406736754831263328, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
@@ -2291,3 +2480,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 620799760}
   - {fileID: 734717005}
+  - {fileID: 1331031288}

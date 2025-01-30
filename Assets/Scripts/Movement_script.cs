@@ -15,6 +15,10 @@ public class Movement : MonoBehaviour
     //[SerializeField] float jumpHeight = 2f;
     [SerializeField] float legWait = .5f;
     // Start is called before the first frame update
+
+
+    public bool Legtype;
+    
     void Start()
     {
         leftLegRB = leftLeg.GetComponent<Rigidbody2D>();
@@ -26,6 +30,16 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            Legtype = false;
+        }
+        
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            Legtype = true;
+        }
+        
         // horizontal input axis, so this is both a d and arrow keys
         // swap control from axes to instead key presses
         // instead i dont want to check the axis, i want to know if a has been pressed or d
@@ -33,61 +47,73 @@ public class Movement : MonoBehaviour
         // similarly
         // check if right and left arrow have been pressed, and move the other leg accordingly
 
-        if (Input.GetKeyDown(KeyCode.A))
+
+
+        if (Legtype == true)
         {
-            anim.Play("Leftfootleft");
-            StartCoroutine(MoveLeftfootleft(legWait));
+            
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                anim.Play("Leftfootleft");
+                StartCoroutine(MoveLeftfootleft(legWait));
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                anim.Play("LeftfootRight");
+                StartCoroutine(MoveLeftfootRight(legWait));
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                anim.Play("Rightfootleft");
+                StartCoroutine(MoveRightfootLeft(legWait));
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                anim.Play("RightfootRight");
+                StartCoroutine(MoveRightfootRight(legWait));
+            }
+
+            if (Input.GetAxisRaw("Horizontal") == 0)
+            {
+                anim.Play("idle");
+            }
+
         }
-        
-        if (Input.GetKeyDown(KeyCode.D))
+
+        if (Legtype == false)
         {
-            anim.Play("LeftfootRight");
-            StartCoroutine(MoveLeftfootRight(legWait));
+
+
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                if (Input.GetAxis("Horizontal") > 0)
+                {
+
+                    anim.Play("walkright");
+                    StartCoroutine(MoveRight(legWait));
+                }
+                else
+                {
+                    anim.Play("walkleft");
+                    StartCoroutine(MoveLeft(legWait));
+
+                }
+
+            }
+            else
+            {
+                anim.Play("idle");
+            }
+
         }
-        
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            anim.Play("Rightfootleft");
-            StartCoroutine(MoveRightfootLeft(legWait));
-        }
-        
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            anim.Play("RightfootRight");
-            StartCoroutine(MoveRightfootRight(legWait));
-        }
-        
-        if (Input.GetAxisRaw("Horizontal") == 0)
-        {
-            anim.Play("idle");
-        }
-        
-        
-        
-        // if(Input.GetAxisRaw("Horizontal") != 0)
-        // {
-        //     if(Input.GetAxis("Horizontal") > 0)
-        //     {
-        //
-        //         anim.Play("walkright");
-        //         StartCoroutine(MoveRight(legWait));
-        //     }
-        //     else
-        //     {
-        //        anim.Play("walkleft");
-        //         StartCoroutine(MoveLeft(legWait));
-        //     
-        //     }
-        //     
-        // }
-        // else
-        // {
-        //     anim.Play("idle");
-        // }
-        
-       
     }
 
+    
+    
+    
     IEnumerator MoveRightfootRight(float seconds)
     {
         rightLegRB.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
