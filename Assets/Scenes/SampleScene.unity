@@ -281,7 +281,6 @@ MonoBehaviour:
   leftLegRB: {fileID: 733073873}
   rightLegRB: {fileID: 163193221}
   speed: 1
-  jumpHeight: 2
   legWait: 1
 --- !u!114 &302732268
 MonoBehaviour:
@@ -1291,6 +1290,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -481077339390294509, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 37851119929390687, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       propertyPath: m_Size.x
       value: 2.13
@@ -1322,6 +1325,10 @@ PrefabInstance:
     - target: {fileID: 3296449286714147431, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296449286714147431, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3479341855472756951, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2255,7 +2262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
-  force: 400
+  force: 200
   BalanceScript: {fileID: 2067223291}
 --- !u!114 &2067223294
 MonoBehaviour:
