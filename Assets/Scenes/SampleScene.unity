@@ -282,6 +282,7 @@ MonoBehaviour:
   rightLegRB: {fileID: 163193221}
   speed: 1
   legWait: 1
+  Legtype: 0
 --- !u!114 &302732268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 1832332421}
   balULL: {fileID: 0}
   balLLL: {fileID: 0}
   balbody: {fileID: 0}
@@ -953,7 +953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 245236815}
   balULL: {fileID: 0}
   balLLL: {fileID: 0}
   balbody: {fileID: 0}
@@ -1193,7 +1192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 2067223291}
   balULL: {fileID: 1832332421}
   balLLL: {fileID: 1811791021}
   balbody: {fileID: 2067223291}
@@ -2164,7 +2162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 1811791021}
   balULL: {fileID: 0}
   balLLL: {fileID: 0}
   balbody: {fileID: 0}
@@ -2183,7 +2180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 1828378152}
   balULL: {fileID: 0}
   balLLL: {fileID: 0}
   balbody: {fileID: 0}
@@ -2337,7 +2333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 1989655767}
   balULL: {fileID: 0}
   balLLL: {fileID: 0}
   balbody: {fileID: 0}
@@ -2459,7 +2454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BalanceScript: {fileID: 2067223291}
   balULL: {fileID: 0}
   balLLL: {fileID: 0}
   balbody: {fileID: 0}

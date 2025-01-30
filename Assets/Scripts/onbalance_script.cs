@@ -44,7 +44,7 @@ public class onbalance_script : MonoBehaviour
         Balance_script bal = other.gameObject.GetComponent<Balance_script>();
         if (bal != null)
         {
-            other.gameObject.GetComponent<Balance_script>().enabled = false;
+            Balance_script.stunned = true;
         }
     }
 }

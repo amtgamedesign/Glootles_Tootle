@@ -61,7 +61,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: targetRotation
-    path: LowerLeftLeg
+    path: UpperLeftLeg
     classID: 114
     script: {fileID: 11500000, guid: 2c3b24adc32b981458b60ddb730514ad, type: 3}
     flags: 0
@@ -74,7 +74,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4209359224
+      path: 3028698465
       attribute: 1865065137
       script: {fileID: 11500000, guid: 2c3b24adc32b981458b60ddb730514ad, type: 3}
       typeID: 114
@@ -148,7 +148,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: targetRotation
-    path: LowerLeftLeg
+    path: UpperLeftLeg
     classID: 114
     script: {fileID: 11500000, guid: 2c3b24adc32b981458b60ddb730514ad, type: 3}
     flags: 0
