@@ -282,8 +282,8 @@ MonoBehaviour:
   rightLeg: {fileID: 1811791007}
   leftLegRB: {fileID: 733073873}
   rightLegRB: {fileID: 163193221}
-  bodyrb: {fileID: 981024763}
-  headrb: {fileID: 1804210581}
+  BodyBalanceScript: {fileID: 0}
+  HeadBalanceScript: {fileID: 0}
   speed: 0.5
   legWait: 1
   body: {fileID: 1811791002}
