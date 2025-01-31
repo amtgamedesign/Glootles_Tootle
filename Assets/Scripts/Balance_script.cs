@@ -34,9 +34,9 @@ public class Balance_script : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerStay2D(Collider2D other)
     {
-        Death_script death = other.gameObject.GetComponent<Death_script>();
+        DEATH_script death = other.gameObject.GetComponent<DEATH_script>();
         if (death != null)
         {
             onbalance_script.gameover = true;
