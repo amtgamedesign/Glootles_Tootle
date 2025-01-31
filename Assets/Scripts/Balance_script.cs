@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Balance_script : MonoBehaviour
 {
+    
     public float targetRotation;
     public Rigidbody2D rb;
     public float force;

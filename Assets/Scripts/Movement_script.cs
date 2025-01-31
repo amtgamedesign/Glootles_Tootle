@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Movement_script : MonoBehaviour
 {
     
     public GameObject leftLeg;
@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rightLegRB;
     
     Animator anim;
-    [SerializeField] float speed = 2f;
+    public float speed = 2f;
     //[SerializeField] float jumpHeight = 2f;
     [SerializeField] float legWait = .5f;
     // Start is called before the first frame update
