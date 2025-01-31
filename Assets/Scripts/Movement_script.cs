@@ -22,8 +22,9 @@ public class Movement_script : MonoBehaviour
     
 
     public GameObject body;
-    public TextMeshPro milestext;
+    public TextMeshPro milestext, highscoretext;
     public float miles;
+    
     
     
     void Start()
@@ -31,7 +32,7 @@ public class Movement_script : MonoBehaviour
         leftLegRB = leftLeg.GetComponent<Rigidbody2D>();
         rightLegRB = rightLeg.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        
+       // PlayerPrefs.SetInt("highscore",0);
     }
 
     // Update is called once per frame
@@ -40,6 +41,20 @@ public class Movement_script : MonoBehaviour
         //Displays Depth meter
         miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
         milestext.text = "Miles: " + miles+ "m";
+
+        highscoretext.text = $"High Score: {PlayerPrefs.GetFloat("highscore",0)}";
+        
+        // PlayerPrefs.SetFloat("HighScore", miles);
+        // PlayerPrefs.GetFloat("HighScore");
+
+        
+        
+        if (miles > PlayerPrefs.GetFloat("highscore", 0))
+        {
+            PlayerPrefs.SetFloat("highscore", miles);
+        }
+        
+        
         
         
         if (Input.GetKey(KeyCode.Alpha1))
