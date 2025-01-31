@@ -69,7 +69,7 @@ public class Movement_script : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             anim.Play("bendingani");
-            StartCoroutine(Bending(legWait));
+            //StartCoroutine(Bending(legWait));
             Debug.Log("button is working");
         }
         
@@ -131,20 +131,14 @@ public class Movement_script : MonoBehaviour
             }
         }
         
-        
-        
-        
-        
-        
-        
     }
 
     
     IEnumerator Bending(float seconds)
     {
         Debug.Log("Coruteen is working");
-        headrb.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
-        bodyrb.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
+        headrb.AddForce(Vector2.right * (3 * 1000) * Time.deltaTime);
+        bodyrb.AddForce(Vector2.right * (3 * 1000) * Time.deltaTime);
         yield return new WaitForSeconds(seconds);
     }
     
