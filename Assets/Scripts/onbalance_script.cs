@@ -8,6 +8,7 @@ public class onbalance_script : MonoBehaviour
 {
     public Balance_script balULL, balLLL, balbody, balURL, balLRL, balhead;
     public bool backup = true;
+    public static bool bodydisengaged = false;
     public float timer = 5;
     public Movement_script MovementScript;
 
@@ -15,7 +16,7 @@ public class onbalance_script : MonoBehaviour
     void Update()
     {
 
-        if (balhead.enabled == false | balURL.enabled == false | balLRL.enabled == false | balULL.enabled == false | balLLL.enabled == false | balbody.enabled == false)
+        if (bodydisengaged == true)
         {
             balhead.enabled = false;
             balURL.enabled = false;
@@ -36,6 +37,7 @@ public class onbalance_script : MonoBehaviour
             balLRL.enabled = true;
             balULL.enabled = true;
 
+            bodydisengaged = false;
             timer = 5;
             backup = true;
             MovementScript.speed = 1;

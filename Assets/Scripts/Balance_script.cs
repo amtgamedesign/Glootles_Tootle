@@ -28,7 +28,7 @@ public class Balance_script : MonoBehaviour
         Obstacles_script obstacles = other.gameObject.GetComponent<Obstacles_script>();
         if (obstacles != null)
         {
-            BalanceScript.enabled = false;
+            onbalance_script.bodydisengaged = true;
         }
     }
     
