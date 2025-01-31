@@ -5,19 +5,23 @@ using UnityEngine;
 
 public class Movement_script : MonoBehaviour
 {
-    
+    //Body parts and changing of movement bool
+    public bool Legtype;
     public GameObject leftLeg;
     public GameObject rightLeg;
     public Rigidbody2D leftLegRB;
     public Rigidbody2D rightLegRB;
     
+    
+    //Animator
     Animator anim;
+    
+    //Speed and how long it takes for a leg to change
     public float speed = 2f;
-    //[SerializeField] float jumpHeight = 2f;
     [SerializeField] float legWait = .5f;
-    // Start is called before the first frame update
-    public bool Legtype;
+    
 
+    public GameObject body;
     public TextMeshPro milestext;
     public float miles;
     
@@ -34,7 +38,7 @@ public class Movement_script : MonoBehaviour
     void Update()
     {
         //Displays Depth meter
-        miles = (float)((Mathf.Round(transform.position.y * 10)) / 10.0);
+        miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
         milestext.text = "Miles: " + miles+ "m";
         
         
