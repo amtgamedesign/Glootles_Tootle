@@ -7,10 +7,13 @@ public class Movement_script : MonoBehaviour
 {
     //Body parts and changing of movement bool
     public bool Legtype;
+    public GameObject head;
     public GameObject leftLeg;
     public GameObject rightLeg;
     public Rigidbody2D leftLegRB;
     public Rigidbody2D rightLegRB;
+    public Rigidbody2D bodyrb;
+    public Rigidbody2D headrb;
     
     
     //Animator
@@ -31,6 +34,9 @@ public class Movement_script : MonoBehaviour
     {
         leftLegRB = leftLeg.GetComponent<Rigidbody2D>();
         rightLegRB = rightLeg.GetComponent<Rigidbody2D>();
+        headrb = head.GetComponent<Rigidbody2D>();
+        bodyrb = body.GetComponent<Rigidbody2D>();
+        
         anim = GetComponent<Animator>();
        // PlayerPrefs.SetInt("highscore",0);
     }
@@ -38,47 +44,39 @@ public class Movement_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Displays Depth meter
-        miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
-        milestext.text = "Miles: " + miles+ "m";
-
-        highscoretext.text = $"High Score: {PlayerPrefs.GetFloat("highscore",0)}";
-        
         // PlayerPrefs.SetFloat("HighScore", miles);
         // PlayerPrefs.GetFloat("HighScore");
-
         
-        
+        //tracks and displays: meters and high score
+        miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
+        milestext.text = "Miles: " + miles+ "m";
+        highscoretext.text = $"High Score: {PlayerPrefs.GetFloat("highscore",0)}";
         if (miles > PlayerPrefs.GetFloat("highscore", 0))
         {
             PlayerPrefs.SetFloat("highscore", miles);
         }
         
-        
-        
-        
+        //Changes leg types
         if (Input.GetKey(KeyCode.Alpha1))
         {
             Legtype = false;
         }
-        
         if (Input.GetKey(KeyCode.Alpha2))
         {
             Legtype = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            anim.Play("bendingani");
+            StartCoroutine(Bending(legWait));
+            Debug.Log("button is working");
+        }
         
-        // horizontal input axis, so this is both a d and arrow keys
-        // swap control from axes to instead key presses
-        // instead i dont want to check the axis, i want to know if a has been pressed or d
-        // and then move a leg accordingly
-        // similarly
-        // check if right and left arrow have been pressed, and move the other leg accordingly
-
-
-
+        
+        
         if (Legtype == true)
         {
-            
             if (Input.GetKeyDown(KeyCode.A))
             {
                 anim.Play("Leftfootleft");
@@ -107,13 +105,10 @@ public class Movement_script : MonoBehaviour
             {
                 anim.Play("idle");
             }
-
         }
 
         if (Legtype == false)
         {
-
-
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
                 if (Input.GetAxis("Horizontal") > 0)
@@ -134,12 +129,24 @@ public class Movement_script : MonoBehaviour
             {
                 anim.Play("idle");
             }
-
         }
+        
+        
+        
+        
+        
+        
+        
     }
 
     
-    
+    IEnumerator Bending(float seconds)
+    {
+        Debug.Log("Coruteen is working");
+        headrb.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
+        bodyrb.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
+        yield return new WaitForSeconds(seconds);
+    }
     
     IEnumerator MoveRightfootRight(float seconds)
     {

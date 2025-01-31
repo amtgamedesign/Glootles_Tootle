@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRotation: 0
-  rb: {fileID: 0}
+  rb: {fileID: 1804210581}
   force: 30
   BalanceScript: {fileID: 245236815}
 --- !u!1 &262384753 stripped
@@ -277,10 +277,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Legtype: 0
+  head: {fileID: 1811791010}
   leftLeg: {fileID: 1811791003}
   rightLeg: {fileID: 1811791007}
   leftLegRB: {fileID: 733073873}
   rightLegRB: {fileID: 163193221}
+  bodyrb: {fileID: 981024763}
+  headrb: {fileID: 1804210581}
   speed: 0.5
   legWait: 1
   body: {fileID: 1811791002}
@@ -1685,7 +1688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 1503395379}
-  xfloat: 1
+  xfloat: 0
   yfloat: 0
 --- !u!50 &1503395379
 Rigidbody2D:
@@ -3082,7 +3085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRotation: 0
-  rb: {fileID: 0}
+  rb: {fileID: 981024763}
   force: 200
   BalanceScript: {fileID: 2067223291}
 --- !u!4 &2067223296 stripped
@@ -3104,11 +3107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.05
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.97
+      value: -2.14
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3144,7 +3147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3289631175318830588, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: xfloat
-      value: -15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3289631175318830588, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: yfloat
