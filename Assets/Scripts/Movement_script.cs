@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Movement_script : MonoBehaviour
@@ -7,7 +8,7 @@ public class Movement_script : MonoBehaviour
     
     public GameObject leftLeg;
     public GameObject rightLeg;
-   public Rigidbody2D leftLegRB;
+    public Rigidbody2D leftLegRB;
     public Rigidbody2D rightLegRB;
     
     Animator anim;
@@ -15,9 +16,11 @@ public class Movement_script : MonoBehaviour
     //[SerializeField] float jumpHeight = 2f;
     [SerializeField] float legWait = .5f;
     // Start is called before the first frame update
-
-
     public bool Legtype;
+
+    public TextMeshPro milestext;
+    public float miles;
+    
     
     void Start()
     {
@@ -30,6 +33,11 @@ public class Movement_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Displays Depth meter
+        miles = (float)((Mathf.Round(transform.position.y * 10)) / 10.0);
+        milestext.text = "Miles: " + miles+ "m";
+        
+        
         if (Input.GetKey(KeyCode.Alpha1))
         {
             Legtype = false;
