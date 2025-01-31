@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,11 +32,14 @@ public class Balance_script : MonoBehaviour
             onbalance_script.bodydisengaged = true;
         }
         
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
         Death_script death = other.gameObject.GetComponent<Death_script>();
         if (death != null)
         {
             onbalance_script.gameover = true;
         }
     }
-    
 }

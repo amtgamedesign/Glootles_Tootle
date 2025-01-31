@@ -31,6 +31,9 @@ public class onbalance_script : MonoBehaviour
         if (gameovertimer <= 0)
         {
             SceneManager.LoadScene("Gameplay");
+            bodydisengaged = false;
+            gameover = false;
+            gameovertimer = 5;
         }
 
         if (bodydisengaged == true)
