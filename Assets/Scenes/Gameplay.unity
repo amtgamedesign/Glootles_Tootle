@@ -306,6 +306,7 @@ MonoBehaviour:
   balhead: {fileID: 245236815}
   backup: 1
   timer: 5
+  gameovertimer: 5
   MovementScript: {fileID: 262384757}
 --- !u!1 &519420028
 GameObject:
@@ -1208,7 +1209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503395373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e50a162d001cb4cab24f68a9cd2d4b, type: 3}
+  m_Script: {fileID: 11500000, guid: f43bdd661955b064d953257e8357e89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &1503395375
@@ -2238,6 +2239,7 @@ MonoBehaviour:
   balhead: {fileID: 0}
   backup: 1
   timer: 5
+  gameovertimer: 5
   MovementScript: {fileID: 0}
 --- !u!114 &1828378152
 MonoBehaviour:
