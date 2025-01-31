@@ -283,24 +283,26 @@ MonoBehaviour:
   speed: 1
   legWait: 1
   Legtype: 0
---- !u!114 &302732268
+--- !u!114 &262384759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811791003}
-  m_Enabled: 0
+  m_GameObject: {fileID: 262384753}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balULL: {fileID: 0}
-  balLLL: {fileID: 0}
-  balbody: {fileID: 0}
-  balURR: {fileID: 0}
-  balLRR: {fileID: 0}
-  balhead: {fileID: 0}
+  balULL: {fileID: 1832332421}
+  balLLL: {fileID: 1811791021}
+  balbody: {fileID: 2067223291}
+  balURL: {fileID: 1989655767}
+  balLRL: {fileID: 1828378152}
+  balhead: {fileID: 245236815}
+  backup: 1
+  timer: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,24 +943,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.35333332, y: 1.605}
   m_Direction: 0
---- !u!114 &1089172773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811791010}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balULL: {fileID: 0}
-  balLLL: {fileID: 0}
-  balbody: {fileID: 0}
-  balURR: {fileID: 0}
-  balLRR: {fileID: 0}
-  balhead: {fileID: 0}
 --- !u!233 &1121641132
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1189,15 +1173,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331031285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
+  m_Script: {fileID: 11500000, guid: dcb0c40c264bee94295a77229e32679e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balULL: {fileID: 1832332421}
-  balLLL: {fileID: 1811791021}
-  balbody: {fileID: 2067223291}
-  balURR: {fileID: 1989655767}
-  balLRR: {fileID: 1828378152}
-  balhead: {fileID: 245236815}
 --- !u!233 &1804210579
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1786,6 +1764,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 262384757}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 262384759}
     - targetCorrespondingSourceObject: {fileID: 5242439767917160522, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1804210581}
@@ -1798,9 +1779,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5242439767917160522, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 245236815}
-    - targetCorrespondingSourceObject: {fileID: 5242439767917160522, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1089172773}
     - targetCorrespondingSourceObject: {fileID: 6713391552875057116, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1811791016}
@@ -1813,9 +1791,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6713391552875057116, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1811791021}
-    - targetCorrespondingSourceObject: {fileID: 6713391552875057116, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1811791024}
     - targetCorrespondingSourceObject: {fileID: -8949690770334285348, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 748725972}
@@ -1843,9 +1818,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4660907294764080312, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1989655767}
-    - targetCorrespondingSourceObject: {fileID: -4660907294764080312, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1989655770}
     - targetCorrespondingSourceObject: {fileID: -7944333951836763253, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1811791013}
@@ -1882,9 +1854,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1769465101944927738, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067223291}
-    - targetCorrespondingSourceObject: {fileID: 1769465101944927738, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2067223294}
     - targetCorrespondingSourceObject: {fileID: -4043925601262068978, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 733073873}
@@ -1897,9 +1866,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4043925601262068978, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1832332421}
-    - targetCorrespondingSourceObject: {fileID: -4043925601262068978, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 302732268}
     - targetCorrespondingSourceObject: {fileID: -2688247685502082924, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1121641134}
@@ -2150,24 +2116,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1811791021}
---- !u!114 &1811791024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811791009}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balULL: {fileID: 0}
-  balLLL: {fileID: 0}
-  balbody: {fileID: 0}
-  balURR: {fileID: 0}
-  balLRR: {fileID: 0}
-  balhead: {fileID: 0}
 --- !u!114 &1828378149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,9 +2131,11 @@ MonoBehaviour:
   balULL: {fileID: 0}
   balLLL: {fileID: 0}
   balbody: {fileID: 0}
-  balURR: {fileID: 0}
-  balLRR: {fileID: 0}
+  balURL: {fileID: 0}
+  balLRL: {fileID: 0}
   balhead: {fileID: 0}
+  backup: 1
+  timer: 5
 --- !u!114 &1828378152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,24 +2271,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1989655767}
---- !u!114 &1989655770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811791007}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balULL: {fileID: 0}
-  balLLL: {fileID: 0}
-  balbody: {fileID: 0}
-  balURR: {fileID: 0}
-  balLRR: {fileID: 0}
-  balhead: {fileID: 0}
 --- !u!233 &2060406726
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -2442,24 +2374,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   force: 200
   BalanceScript: {fileID: 2067223291}
---- !u!114 &2067223294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811791002}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620faae268296e741b92be8dbed916c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balULL: {fileID: 0}
-  balLLL: {fileID: 0}
-  balbody: {fileID: 0}
-  balURR: {fileID: 0}
-  balLRR: {fileID: 0}
-  balhead: {fileID: 0}
 --- !u!4 &2067223296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1406736754831263328, guid: 6af0e54e61cd59d478bf91fe84329740, type: 3}

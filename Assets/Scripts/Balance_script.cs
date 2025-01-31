@@ -8,9 +8,6 @@ public class Balance_script : MonoBehaviour
     public Rigidbody2D rb;
     public float force;
     public Balance_script BalanceScript;
-    
-    public static float timer = 5;
-    public static bool stunned;
 
     private void Start()
     {
@@ -21,22 +18,17 @@ public class Balance_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stunned == false)
-        {
             rb.MoveRotation(Mathf.LerpAngle(rb.rotation, targetRotation, force * Time.deltaTime));
-        }
-
-        if (stunned == true)
-        {
-            timer -= Time.deltaTime;
-        }
-
-        if (timer <= 0)
-        {
-            timer = 5;
-            stunned = false;
-        }
-        
      
     }
+    
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        Obstacles_script obstacles = other.gameObject.GetComponent<Obstacles_script>();
+        if (obstacles != null)
+        {
+            BalanceScript.enabled = false;
+        }
+    }
+    
 }
