@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class DEATH_script : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Rigidbody2D RB;
+    public float xfloat, yfloat;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        RB.velocity = new Vector2(xfloat, yfloat);
     }
 }

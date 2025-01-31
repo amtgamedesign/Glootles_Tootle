@@ -1378,6 +1378,7 @@ GameObject:
   - component: {fileID: 1503395376}
   - component: {fileID: 1503395375}
   - component: {fileID: 1503395377}
+  - component: {fileID: 1503395379}
   - component: {fileID: 1503395378}
   m_Layer: 0
   m_Name: Death square
@@ -1510,6 +1511,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43bdd661955b064d953257e8357e89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RB: {fileID: 1503395379}
+  xfloat: 0.1
+  yfloat: 0
+--- !u!50 &1503395379
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503395373}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!233 &1804210579
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -2691,8 +2722,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2900,11 +2931,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.66
+      value: 9.01
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2940,7 +2971,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3289631175318830588, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: xfloat
-      value: -10
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289631175318830588, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
+      propertyPath: yfloat
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7880531884073494742, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_Name
