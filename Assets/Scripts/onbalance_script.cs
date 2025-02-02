@@ -10,7 +10,7 @@ public class onbalance_script : MonoBehaviour
     public Balance_script balULL, balLLL, balbody, balURL, balLRL, balhead;
     public bool backup = true;
     public static bool bodydisengaged = false, gameover = false;
-    public float timer = 5, gameovertimer = 5;
+    public float stuntimer = 5, gameovertimer = 5;
     public Movement_script MovementScript;
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class onbalance_script : MonoBehaviour
             MovementScript.speed = 0;
         }
         
-        if (timer <= 0)
+        if (stuntimer <= 0)
         {
             balhead.enabled =true;
             balURL.enabled = true;
@@ -58,14 +58,14 @@ public class onbalance_script : MonoBehaviour
             balULL.enabled = true;
 
             bodydisengaged = false;
-            timer = 5;
+            stuntimer = 5;
             backup = true;
             MovementScript.speed = 1;
         }
 
         if (backup == false)
         {
-            timer -= Time.deltaTime;
+            stuntimer -= Time.deltaTime;
         }
         
     }
