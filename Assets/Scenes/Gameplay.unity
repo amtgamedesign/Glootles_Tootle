@@ -3519,7 +3519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 1503395379}
-  xfloat: 0
+  xfloat: 1
   yfloat: 0
 --- !u!50 &1503395379
 Rigidbody2D:
