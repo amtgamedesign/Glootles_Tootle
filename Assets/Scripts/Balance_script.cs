@@ -30,6 +30,7 @@ public class Balance_script : MonoBehaviour
         if (obstacles != null)
         {
             onbalance_script.bodydisengaged = true;
+            Destroy(other.gameObject);
         }
         
     }

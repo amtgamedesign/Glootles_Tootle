@@ -17,7 +17,7 @@ public class Movement_script : MonoBehaviour
     
     
     //Animator
-    Animator anim;
+    public Animator anim;
     
     //Speed and how long it takes for a leg to change
     public float speed = 2f;
