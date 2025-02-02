@@ -908,7 +908,7 @@ MonoBehaviour:
   balLRL: {fileID: 1417871337}
   balhead: {fileID: 1576178459}
   backup: 1
-  stuntimer: 5
+  stuntimer: 3
   gameovertimer: 5
   MovementScript: {fileID: 210386377}
 --- !u!114 &210386379
@@ -1066,7 +1066,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 7bff49ca3f0a4f046b94f5ec5329bec8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1434,7 +1434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: b41461cd629d19f40b069457616caca7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
