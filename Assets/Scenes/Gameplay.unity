@@ -908,7 +908,7 @@ MonoBehaviour:
   balLRL: {fileID: 1417871337}
   balhead: {fileID: 1576178459}
   backup: 1
-  timer: 5
+  stuntimer: 5
   gameovertimer: 5
   MovementScript: {fileID: 210386377}
 --- !u!114 &210386379
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   balLRL: {fileID: 1828378152}
   balhead: {fileID: 245236815}
   backup: 1
-  timer: 5
+  stuntimer: 3
   gameovertimer: 5
   MovementScript: {fileID: 262384757}
 --- !u!1 &519420028
@@ -4704,7 +4704,7 @@ MonoBehaviour:
   balLRL: {fileID: 0}
   balhead: {fileID: 0}
   backup: 1
-  timer: 5
+  stuntimer: 5
   gameovertimer: 5
   MovementScript: {fileID: 0}
 --- !u!114 &1828378152

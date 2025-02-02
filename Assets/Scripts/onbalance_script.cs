@@ -58,7 +58,7 @@ public class onbalance_script : MonoBehaviour
             balULL.enabled = true;
 
             bodydisengaged = false;
-            stuntimer = 5;
+            stuntimer = 3;
             backup = true;
             MovementScript.speed = 1;
         }
