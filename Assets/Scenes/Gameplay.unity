@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 57718619}
+  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 57718617}
 --- !u!233 &57718618
@@ -645,6 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 163290304}
+  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 163290302}
 --- !u!233 &163290303
@@ -875,6 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Legtype: 0
+  facingleft: 0
   head: {fileID: 1576178455}
   leftLeg: {fileID: 57718615}
   rightLeg: {fileID: 163290300}
@@ -939,6 +942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1804210581}
+  sp: {fileID: 0}
   force: 30
   BalanceScript: {fileID: 245236815}
 --- !u!1 &259786211
@@ -1166,6 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Legtype: 0
+  facingleft: 0
   head: {fileID: 1811791010}
   leftLeg: {fileID: 1811791003}
   rightLeg: {fileID: 1811791007}
@@ -2536,6 +2541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1078513973}
+  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 1078513971}
 --- !u!233 &1078513972
@@ -2875,6 +2881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1155962725}
+  sp: {fileID: 0}
   force: 200
   BalanceScript: {fileID: 1155962723}
 --- !u!50 &1155962725
@@ -3229,6 +3236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1417871339}
+  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 1417871337}
 --- !u!233 &1417871338
@@ -3691,6 +3699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1576178461}
+  sp: {fileID: 0}
   force: 30
   BalanceScript: {fileID: 1576178459}
 --- !u!233 &1576178460
@@ -4687,6 +4696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
+  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1811791021}
 --- !u!114 &1828378149
@@ -4725,6 +4735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
+  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1828378152}
 --- !u!114 &1832332421
@@ -4741,6 +4752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
+  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1832332421}
 --- !u!233 &1872043802
@@ -4844,6 +4856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
+  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1989655767}
 --- !u!1 &1998960460
@@ -5118,6 +5131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 981024763}
+  sp: {fileID: 0}
   force: 200
   BalanceScript: {fileID: 2067223291}
 --- !u!1001 &7166000159913205077
