@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Movement_script : MonoBehaviour
 {
-    public static Movement_script Mainmovement;
     
     //Body parts and changing of movement bool
     public bool Legtype, facingleft;
@@ -17,6 +16,8 @@ public class Movement_script : MonoBehaviour
     public Rigidbody2D rightLegRB;
     public Balance_script BodyBalanceScript, leftlegbalance, rightlegbalance;
     public Balance_script HeadBalanceScript;
+
+  //  public SpriteRenderer headsr, bodysr, ullsp, lllsp, urlsp, lrlsp;
     
     
     //Animator
@@ -79,8 +80,6 @@ public class Movement_script : MonoBehaviour
                 HeadBalanceScript.targetRotation = 50;
                 leftlegbalance.targetRotation = -200;
                 rightlegbalance.targetRotation = -200;
-                
-                anim.Play("Glootles_bending");
             }
         
             if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
@@ -95,24 +94,28 @@ public class Movement_script : MonoBehaviour
             {
                 anim.Play("Glootle_Leftfootleft");
                 StartCoroutine(MoveLeftfootleft(legWait));
+                facingleft = true;
             }
 
             if (Input.GetKeyDown(KeyCode.D))
             {
                 anim.Play("Glootle_LeftfootRight");
                 StartCoroutine(MoveLeftfootRight(legWait));
+                facingleft = false;
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 anim.Play("Glootle_Rightfootleft");
                 StartCoroutine(MoveRightfootLeft(legWait));
+                facingleft = true;
             }
 
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 anim.Play("Glootle_RightfootRight");
                 StartCoroutine(MoveRightfootRight(legWait));
+                facingleft = false;
             }
 
             if (Input.GetAxisRaw("Horizontal") == 0)
@@ -145,11 +148,13 @@ public class Movement_script : MonoBehaviour
                 {
                     anim.Play("Glootle_WalkRight");
                     StartCoroutine(MoveRight(legWait));
+                    facingleft = false;
                 }
                 else
                 {
                     anim.Play("Glootle_WalkLeft");
                     StartCoroutine(MoveLeft(legWait));
+                    facingleft = true;
                 }
 
             }

@@ -153,11 +153,11 @@ Transform:
   m_GameObject: {fileID: 57718615}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.29999948, y: -0.0666668, z: 0}
-  m_LocalScale: {x: 1.3178732, y: 1.7703518, z: 1}
+  m_LocalPosition: {x: -0.34541225, y: -0.21328126, z: 0.18818508}
+  m_LocalScale: {x: 0.39536205, y: 0.53110564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1836021323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &57718617
 MonoBehaviour:
@@ -173,7 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 57718619}
-  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 57718617}
 --- !u!233 &57718618
@@ -353,12 +352,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162578772}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 2.45, y: 3.1310003, z: 0}
-  m_LocalScale: {x: 0.675, y: 0.6945, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.29958797, y: 0.7460188, z: 0.18818508}
+  m_LocalScale: {x: 0.20250003, y: 0.20835003, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1985153744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!233 &162578774
 HingeJoint2D:
@@ -626,11 +625,11 @@ Transform:
   m_GameObject: {fileID: 163290300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -0.0666668, z: 0}
-  m_LocalScale: {x: 1.3178732, y: 1.7703518, z: 1}
+  m_LocalPosition: {x: -0.34541225, y: -0.21328126, z: 0.18818508}
+  m_LocalScale: {x: 0.39536205, y: 0.53110564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1836021323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &163290302
 MonoBehaviour:
@@ -646,7 +645,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 163290304}
-  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 163290302}
 --- !u!233 &163290303
@@ -831,16 +829,10 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1836021323}
   - {fileID: 1576178457}
   - {fileID: 1155962722}
-  - {fileID: 520442324}
-  - {fileID: 259786212}
-  - {fileID: 162578773}
-  - {fileID: 1250851395}
-  - {fileID: 163290301}
-  - {fileID: 1417871336}
-  - {fileID: 57718616}
-  - {fileID: 1078513970}
+  - {fileID: 1985153744}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &210386376
@@ -887,6 +879,12 @@ MonoBehaviour:
   leftlegbalance: {fileID: 57718617}
   rightlegbalance: {fileID: 163290302}
   HeadBalanceScript: {fileID: 1576178459}
+  headsr: {fileID: 1576178456}
+  bodysr: {fileID: 1155962721}
+  ullsp: {fileID: 57718620}
+  lllsp: {fileID: 1078513974}
+  urlsp: {fileID: 163290305}
+  lrlsp: {fileID: 1417871340}
   anim: {fileID: 210386376}
   speed: 1
   legWait: 0.5
@@ -942,7 +940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1804210581}
-  sp: {fileID: 0}
   force: 30
   BalanceScript: {fileID: 245236815}
 --- !u!1 &259786211
@@ -973,12 +970,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259786211}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -7.5, y: 3.13, z: 0}
-  m_LocalScale: {x: 0.6343, y: 0.6629, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -2.685412, y: 0.7457188, z: 0.18818508}
+  m_LocalScale: {x: 0.19029002, y: 0.19887002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1985153744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!233 &259786213
 HingeJoint2D:
@@ -1180,6 +1177,12 @@ MonoBehaviour:
   leftlegbalance: {fileID: 0}
   rightlegbalance: {fileID: 0}
   HeadBalanceScript: {fileID: 0}
+  headsr: {fileID: 0}
+  bodysr: {fileID: 0}
+  ullsp: {fileID: 0}
+  lllsp: {fileID: 0}
+  urlsp: {fileID: 0}
+  lrlsp: {fileID: 0}
   anim: {fileID: 262384756}
   speed: 0.5
   legWait: 1
@@ -1344,12 +1347,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520442323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.1999996, y: 3.13, z: 0}
-  m_LocalScale: {x: 0.675, y: 0.6945, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.095412, y: 0.7457188, z: 0.18818508}
+  m_LocalScale: {x: 0.20250003, y: 0.20835003, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1985153744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!233 &520442325
 HingeJoint2D:
@@ -2521,11 +2524,11 @@ Transform:
   m_GameObject: {fileID: 1078513969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3069995, y: -5.9263325, z: 0}
-  m_LocalScale: {x: 1.3178732, y: 1.7703518, z: 1}
+  m_LocalPosition: {x: -0.34331226, y: -1.9711809, z: 0.18818508}
+  m_LocalScale: {x: 0.39536205, y: 0.53110564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1836021323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1078513971
 MonoBehaviour:
@@ -2541,7 +2544,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1078513973}
-  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 1078513971}
 --- !u!233 &1078513972
@@ -2881,7 +2883,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1155962725}
-  sp: {fileID: 0}
   force: 200
   BalanceScript: {fileID: 1155962723}
 --- !u!50 &1155962725
@@ -3040,12 +3041,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250851394}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.81, y: 3.13, z: 0}
-  m_LocalScale: {x: 0.6343, y: 0.6629, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.907588, y: 0.7457188, z: 0.18818508}
+  m_LocalScale: {x: 0.19029002, y: 0.19887002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1985153744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!233 &1250851396
 HingeJoint2D:
@@ -3216,11 +3217,11 @@ Transform:
   m_GameObject: {fileID: 1417871335}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3069995, y: -5.9263325, z: 0}
-  m_LocalScale: {x: 1.3178732, y: 1.7703518, z: 1}
+  m_LocalPosition: {x: -0.34331226, y: -1.9711809, z: 0.18818508}
+  m_LocalScale: {x: 0.39536205, y: 0.53110564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 210386375}
+  m_Father: {fileID: 1836021323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1417871337
 MonoBehaviour:
@@ -3236,7 +3237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1417871339}
-  sp: {fileID: 0}
   force: 150
   BalanceScript: {fileID: 1417871337}
 --- !u!233 &1417871338
@@ -3699,7 +3699,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1576178461}
-  sp: {fileID: 0}
   force: 30
   BalanceScript: {fileID: 1576178459}
 --- !u!233 &1576178460
@@ -4696,7 +4695,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
-  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1811791021}
 --- !u!114 &1828378149
@@ -4735,7 +4733,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
-  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1828378152}
 --- !u!114 &1832332421
@@ -4752,9 +4749,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
-  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1832332421}
+--- !u!1 &1836021322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836021323}
+  m_Layer: 0
+  m_Name: Legs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1836021323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836021322}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4513738, y: 0.6442707, z: -0.18818508}
+  m_LocalScale: {x: 3.333333, y: 3.333333, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 163290301}
+  - {fileID: 1417871336}
+  - {fileID: 57718616}
+  - {fileID: 1078513970}
+  m_Father: {fileID: 210386375}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!233 &1872043802
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -4842,6 +4873,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1985153743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1985153744}
+  m_Layer: 0
+  m_Name: Arms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1985153744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985153743}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4513738, y: 0.6442707, z: -0.18818508}
+  m_LocalScale: {x: 3.333333, y: 3.333333, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 520442324}
+  - {fileID: 259786212}
+  - {fileID: 162578773}
+  - {fileID: 1250851395}
+  m_Father: {fileID: 210386375}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1989655767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4856,7 +4922,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 0}
-  sp: {fileID: 0}
   force: 400
   BalanceScript: {fileID: 1989655767}
 --- !u!1 &1998960460
@@ -5131,7 +5196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 981024763}
-  sp: {fileID: 0}
   force: 200
   BalanceScript: {fileID: 2067223291}
 --- !u!1001 &7166000159913205077
