@@ -78,7 +78,7 @@ public class Movement_script : MonoBehaviour
             {
                 BodyBalanceScript.targetRotation = 50;
                 HeadBalanceScript.targetRotation = 50;
-                leftlegbalance.targetRotation = -200;
+                leftlegbalance.targetRotation =  -200;
                 rightlegbalance.targetRotation = -200;
             }
         
@@ -130,8 +130,9 @@ public class Movement_script : MonoBehaviour
             {
                 BodyBalanceScript.targetRotation = 50;
                 HeadBalanceScript.targetRotation = 50;
-                leftlegbalance.targetRotation = -200;
+                leftlegbalance.targetRotation =  -200;
                 rightlegbalance.targetRotation = -200;
+                
             }
         
             if (Input.GetKeyUp(KeyCode.S))

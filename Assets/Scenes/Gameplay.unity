@@ -876,15 +876,9 @@ MonoBehaviour:
   leftLegRB: {fileID: 57718619}
   rightLegRB: {fileID: 163290304}
   BodyBalanceScript: {fileID: 1155962723}
-  leftlegbalance: {fileID: 57718617}
+  leftlegbalance: {fileID: 1078513971}
   rightlegbalance: {fileID: 163290302}
-  HeadBalanceScript: {fileID: 1576178459}
-  headsr: {fileID: 1576178456}
-  bodysr: {fileID: 1155962721}
-  ullsp: {fileID: 57718620}
-  lllsp: {fileID: 1078513974}
-  urlsp: {fileID: 163290305}
-  lrlsp: {fileID: 1417871340}
+  HeadBalanceScript: {fileID: 1417871337}
   anim: {fileID: 210386376}
   speed: 1
   legWait: 0.5
@@ -1177,12 +1171,6 @@ MonoBehaviour:
   leftlegbalance: {fileID: 0}
   rightlegbalance: {fileID: 0}
   HeadBalanceScript: {fileID: 0}
-  headsr: {fileID: 0}
-  bodysr: {fileID: 0}
-  ullsp: {fileID: 0}
-  lllsp: {fileID: 0}
-  urlsp: {fileID: 0}
-  lrlsp: {fileID: 0}
   anim: {fileID: 262384756}
   speed: 0.5
   legWait: 1
