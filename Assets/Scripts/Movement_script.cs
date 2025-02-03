@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement_script : MonoBehaviour
@@ -12,7 +13,7 @@ public class Movement_script : MonoBehaviour
     public GameObject rightLeg;
     public Rigidbody2D leftLegRB;
     public Rigidbody2D rightLegRB;
-    public Balance_script BodyBalanceScript;
+    public Balance_script BodyBalanceScript, leftlegbalance, rightlegbalance;
     public Balance_script HeadBalanceScript;
     
     
@@ -36,6 +37,8 @@ public class Movement_script : MonoBehaviour
         rightLegRB = rightLeg.GetComponent<Rigidbody2D>();
         HeadBalanceScript = head.GetComponent<Balance_script>();
         BodyBalanceScript = body.GetComponent<Balance_script>();
+        leftlegbalance = leftLeg.GetComponent<Balance_script>();
+        rightlegbalance = rightLeg.GetComponent<Balance_script>();
         
         anim = GetComponent<Animator>();
        // PlayerPrefs.SetInt("highscore",0);
@@ -65,23 +68,25 @@ public class Movement_script : MonoBehaviour
         {
             Legtype = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            BodyBalanceScript.targetRotation = 100;
-            HeadBalanceScript.targetRotation = 100;
-        }
-        
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            BodyBalanceScript.targetRotation = 0;
-            HeadBalanceScript.targetRotation = 0;
-        }
-        
-        
         
         if (Legtype == true)
         {
+            if (Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                BodyBalanceScript.targetRotation = 50;
+                HeadBalanceScript.targetRotation = 50;
+                leftlegbalance.targetRotation = 50;
+                rightlegbalance.targetRotation = 50;
+            }
+        
+            if (Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.DownArrow))
+            {
+                BodyBalanceScript.targetRotation = 0;
+                HeadBalanceScript.targetRotation = 0;
+                leftlegbalance.targetRotation = 0;
+                rightlegbalance.targetRotation = 0;
+            }
+            
             if (Input.GetKeyDown(KeyCode.A))
             {
                 anim.Play("Glootle_Leftfootleft");
@@ -114,6 +119,22 @@ public class Movement_script : MonoBehaviour
 
         if (Legtype == false)
         {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                BodyBalanceScript.targetRotation = 50;
+                HeadBalanceScript.targetRotation = 50;
+                leftlegbalance.targetRotation = 50;
+                rightlegbalance.targetRotation = 50;
+            }
+        
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                BodyBalanceScript.targetRotation = 0;
+                HeadBalanceScript.targetRotation = 0;
+                leftlegbalance.targetRotation = 0;
+                rightlegbalance.targetRotation = 0;
+            }
+
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
                 if (Input.GetAxis("Horizontal") > 0)

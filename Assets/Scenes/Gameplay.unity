@@ -881,6 +881,8 @@ MonoBehaviour:
   leftLegRB: {fileID: 57718619}
   rightLegRB: {fileID: 163290304}
   BodyBalanceScript: {fileID: 1155962723}
+  leftlegbalance: {fileID: 57718617}
+  rightlegbalance: {fileID: 163290302}
   HeadBalanceScript: {fileID: 1576178459}
   anim: {fileID: 210386376}
   speed: 1
@@ -1170,6 +1172,8 @@ MonoBehaviour:
   leftLegRB: {fileID: 733073873}
   rightLegRB: {fileID: 163193221}
   BodyBalanceScript: {fileID: 0}
+  leftlegbalance: {fileID: 0}
+  rightlegbalance: {fileID: 0}
   HeadBalanceScript: {fileID: 0}
   anim: {fileID: 262384756}
   speed: 0.5
