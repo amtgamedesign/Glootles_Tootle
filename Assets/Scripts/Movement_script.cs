@@ -84,31 +84,31 @@ public class Movement_script : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                anim.Play("Leftfootleft");
+                anim.Play("Glootle_Leftfootleft");
                 StartCoroutine(MoveLeftfootleft(legWait));
             }
 
             if (Input.GetKeyDown(KeyCode.D))
             {
-                anim.Play("LeftfootRight");
+                anim.Play("Glootle_LeftfootRight");
                 StartCoroutine(MoveLeftfootRight(legWait));
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                anim.Play("Rightfootleft");
+                anim.Play("Glootle_Rightfootleft");
                 StartCoroutine(MoveRightfootLeft(legWait));
             }
 
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                anim.Play("RightfootRight");
+                anim.Play("Glootle_RightfootRight");
                 StartCoroutine(MoveRightfootRight(legWait));
             }
 
             if (Input.GetAxisRaw("Horizontal") == 0)
             {
-                anim.Play("idle");
+                anim.Play("Glootle_idle");
             }
         }
 
@@ -119,12 +119,12 @@ public class Movement_script : MonoBehaviour
                 if (Input.GetAxis("Horizontal") > 0)
                 {
 
-                    anim.Play("walkright");
+                    anim.Play("Glootle_WalkRight");
                     StartCoroutine(MoveRight(legWait));
                 }
                 else
                 {
-                    anim.Play("walkleft");
+                    anim.Play("Glootle_WalkLeft");
                     StartCoroutine(MoveLeft(legWait));
 
                 }
@@ -132,7 +132,7 @@ public class Movement_script : MonoBehaviour
             }
             else
             {
-                anim.Play("idle");
+                anim.Play("Glootle_idle");
             }
         }
         
