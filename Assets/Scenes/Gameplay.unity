@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 57718619}
-  force: 150
+  force: 50
   BalanceScript: {fileID: 57718617}
 --- !u!233 &57718618
 HingeJoint2D:
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 163290304}
-  force: 150
+  force: 50
   BalanceScript: {fileID: 163290302}
 --- !u!233 &163290303
 HingeJoint2D:
@@ -3294,7 +3294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1078513973}
-  force: 150
+  force: 50
   BalanceScript: {fileID: 1078513971}
 --- !u!233 &1078513972
 HingeJoint2D:
@@ -3633,7 +3633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1155962725}
-  force: 200
+  force: 50
   BalanceScript: {fileID: 1155962723}
 --- !u!50 &1155962725
 Rigidbody2D:
@@ -3987,7 +3987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1417871339}
-  force: 150
+  force: 50
   BalanceScript: {fileID: 1417871337}
 --- !u!233 &1417871338
 HingeJoint2D:
