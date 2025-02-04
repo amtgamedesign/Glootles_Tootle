@@ -26,6 +26,12 @@ public class Movement_script : MonoBehaviour
     //Speed and how long it takes for a leg to change
     public float speed = 2f;
     [SerializeField] float legWait = .5f;
+    [SerializeField] float jump = .5f;
+    private bool onground;
+    public float positionradius;
+    public LayerMask ground;
+    public Transform playerpos;
+    public Rigidbody2D rb;
     
 
     public GameObject body;
@@ -165,6 +171,13 @@ public class Movement_script : MonoBehaviour
             }
         }
         
+        onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
+        if (onground == true && Input.GetKeyDown(KeyCode.W))
+        {
+            rb.AddForce(jump * Vector2.up);
+        }
+
+
     }
 
     
