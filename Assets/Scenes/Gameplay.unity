@@ -1302,11 +1302,11 @@ MonoBehaviour:
   anim: {fileID: 210386376}
   speed: 1
   legWait: 0.5
-  jump: 50
+  jump: 3500
   positionradius: 0.3
   ground:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   playerpos: {fileID: 1474946179}
   rb: {fileID: 1155962725}
   body: {fileID: 1155962720}
@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 660697654}
   - component: {fileID: 660697653}
   - component: {fileID: 660697652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
