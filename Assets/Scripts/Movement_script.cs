@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -54,35 +53,8 @@ public class Movement_script : MonoBehaviour
        // PlayerPrefs.SetInt("highscore",0);
     }
 
-    private void FixedUpdate()
-    {
-        if (Legtype == false)
-        {
-            if (Input.GetAxisRaw("Horizontal") != 0)
-            {
-                if (Input.GetAxis("Horizontal") > 0)
-                {
-                    anim.Play("Glootle_WalkRight");
-                    StartCoroutine(MoveRight(legWait));
-                    facingleft = false;
-                }
-                else
-                {
-                    anim.Play("Glootle_WalkLeft");
-                    StartCoroutine(MoveLeft(legWait));
-                    facingleft = true;
-                }
-            }
-            else
-            {
-                anim.Play("Glootle_idle");
-            }
-        }
-    }
-
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // PlayerPrefs.SetFloat("HighScore", miles);
         // PlayerPrefs.GetFloat("HighScore");
@@ -191,6 +163,27 @@ public class Movement_script : MonoBehaviour
                 HeadBalanceScript.targetRotation = 0;
                 leftlegbalance.targetRotation = 0;
                 rightlegbalance.targetRotation = 0;
+            }
+
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                if (Input.GetAxis("Horizontal") > 0)
+                {
+                    anim.Play("Glootle_WalkRight");
+                    StartCoroutine(MoveRight(legWait));
+                    facingleft = false;
+                }
+                else
+                {
+                    anim.Play("Glootle_WalkLeft");
+                    StartCoroutine(MoveLeft(legWait));
+                    facingleft = true;
+                }
+
+            }
+            else
+            {
+                anim.Play("Glootle_idle");
             }
         }
         
