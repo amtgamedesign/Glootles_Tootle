@@ -38,6 +38,16 @@ public class Movement_script : MonoBehaviour
     public TextMeshPro milestext, highscoretext;
     public float miles;
     
+    // private var
+    private bool inputA = false;
+    private bool inputD = false;
+    private bool inputRAR = false;
+    private bool inputLAR = false;
+    private bool inputS = false;
+    private bool inputDAR = false;
+    private bool inputW = false;
+    private bool inputUAR = false;
+    
     
     
     void Start()
@@ -51,6 +61,45 @@ public class Movement_script : MonoBehaviour
         
         anim = GetComponent<Animator>();
        // PlayerPrefs.SetInt("highscore",0);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            inputA = true;
+        }
+        else
+        {
+            inputA = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            inputD = true;
+        }
+        else
+        {
+            inputD = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            inputLAR = true;
+        }
+        else
+        {
+            inputLAR = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            inputRAR = true;
+        }
+        else
+        {
+            inputRAR = false;
+        }
     }
 
     // Update is called once per frame
@@ -83,12 +132,13 @@ public class Movement_script : MonoBehaviour
         if (Legtype == true)
         {
             onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
-            if (onground == true && Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.UpArrow))
+            if (onground == true && inputW && inputUAR)
             {
                 rb.AddForce(jump * Vector2.up);
             }
             
-            if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow))
+            //Bending
+            if (inputS && inputDAR)
             {
                 BodyBalanceScript.targetRotation = 50;
                 HeadBalanceScript.targetRotation = 50;
@@ -96,7 +146,7 @@ public class Movement_script : MonoBehaviour
                 rightlegbalance.targetRotation = -200;
             }
         
-            if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+            if (!inputS && !inputDAR)
             {
                 BodyBalanceScript.targetRotation = 0;
                 HeadBalanceScript.targetRotation = 0;
@@ -104,28 +154,32 @@ public class Movement_script : MonoBehaviour
                 rightlegbalance.targetRotation = 0;
             }
             
-            if (Input.GetKeyDown(KeyCode.A))
+            //Left leg left
+            if (inputA)
             {
                 anim.Play("Glootle_Leftfootleft");
                 StartCoroutine(MoveLeftfootleft(legWait));
                 facingleft = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            //Left leg Right
+            if (inputD)
             {
                 anim.Play("Glootle_LeftfootRight");
                 StartCoroutine(MoveLeftfootRight(legWait));
                 facingleft = false;
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            //Right leg left
+            if (inputLAR)
             {
                 anim.Play("Glootle_Rightfootleft");
                 StartCoroutine(MoveRightfootLeft(legWait));
                 facingleft = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            //Right leg Right
+            if (inputRAR)
             {
                 anim.Play("Glootle_RightfootRight");
                 StartCoroutine(MoveRightfootRight(legWait));
@@ -148,7 +202,7 @@ public class Movement_script : MonoBehaviour
                 rb.AddForce(jump * Vector2.up);
             }
             
-            if (Input.GetKeyDown(KeyCode.S))
+            if (inputS || inputUAR)
             {
                 BodyBalanceScript.targetRotation = 50;
                 HeadBalanceScript.targetRotation = 50;
@@ -157,7 +211,7 @@ public class Movement_script : MonoBehaviour
                 
             }
         
-            if (Input.GetKeyUp(KeyCode.S))
+            if (!inputS || !inputUAR)
             {
                 BodyBalanceScript.targetRotation = 0;
                 HeadBalanceScript.targetRotation = 0;
@@ -186,8 +240,6 @@ public class Movement_script : MonoBehaviour
                 anim.Play("Glootle_idle");
             }
         }
-        
-
 
     }
 
@@ -195,39 +247,39 @@ public class Movement_script : MonoBehaviour
     
     IEnumerator MoveRightfootRight(float seconds)
     {
-        rightLegRB.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
+        rightLegRB.AddForce(Vector2.right * (speed * 1000));
         yield return new WaitForSeconds(seconds);
     }
 
     IEnumerator MoveLeftfootRight(float seconds)
     {
-        leftLegRB.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
+        leftLegRB.AddForce(Vector2.right * (speed * 1000));
         yield return new WaitForSeconds(seconds);
     }
     
     IEnumerator MoveRightfootLeft(float seconds)
     {
-        rightLegRB.AddForce(Vector2.left * (speed * 1000) * Time.deltaTime);
+        rightLegRB.AddForce(Vector2.left * (speed * 1000));
         yield return new WaitForSeconds(seconds);
     }
 
     IEnumerator MoveLeftfootleft(float seconds)
     {
-        leftLegRB.AddForce(Vector2.left * (speed * 1000) * Time.deltaTime);
+        leftLegRB.AddForce(Vector2.left * (speed * 1000));
         yield return new WaitForSeconds(seconds);
     }
 
     IEnumerator MoveRight(float seconds)
     {
-        leftLegRB.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
+        leftLegRB.AddForce(Vector2.right * (speed * 1000));
         yield return new WaitForSeconds(seconds);
-        rightLegRB.AddForce(Vector2.right * (speed * 1000) * Time.deltaTime);
+        rightLegRB.AddForce(Vector2.right * (speed * 1000));
     }
 
     IEnumerator MoveLeft(float seconds)
     {
-        rightLegRB.AddForce(Vector2.left * (speed * 1000) * Time.deltaTime);
+        rightLegRB.AddForce(Vector2.left * (speed * 1000));
         yield return new WaitForSeconds(seconds);
-        leftLegRB.AddForce(Vector2.left * (speed * 1000) * Time.deltaTime);
+        leftLegRB.AddForce(Vector2.left * (speed * 1000));
     }
 }

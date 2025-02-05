@@ -1300,7 +1300,7 @@ MonoBehaviour:
   rightlegbalance: {fileID: 163290302}
   HeadBalanceScript: {fileID: 1576178459}
   anim: {fileID: 210386376}
-  speed: 1
+  speed: 0.025
   legWait: 0.5
   jump: 3500
   onground: 0
