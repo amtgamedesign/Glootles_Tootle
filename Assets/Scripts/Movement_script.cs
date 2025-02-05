@@ -78,8 +78,16 @@ public class Movement_script : MonoBehaviour
             Legtype = true;
         }
         
+        
+        //This is two player:
         if (Legtype == true)
         {
+            onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
+            if (onground == true && Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                rb.AddForce(jump * Vector2.up);
+            }
+            
             if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow))
             {
                 BodyBalanceScript.targetRotation = 50;
@@ -130,6 +138,8 @@ public class Movement_script : MonoBehaviour
             }
         }
 
+        
+        //This is one player
         if (Legtype == false)
         {
             onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
