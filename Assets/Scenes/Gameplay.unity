@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80202226f50329f42ac3a2c770dd8c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Legtype: 0
+  Legtype: 1
   facingleft: 0
   head: {fileID: 1576178455}
   leftLeg: {fileID: 57718615}
@@ -7071,6 +7071,10 @@ PrefabInstance:
     - target: {fileID: 7880531884073494742, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_Name
       value: Obs_type1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880531884073494742, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -65,7 +65,7 @@ public class Movement_script : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             inputA = true;
         }
@@ -74,16 +74,17 @@ public class Movement_script : MonoBehaviour
             inputA = false;
         }
         
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             inputD = true;
+            Debug.Log("inputD = true");
         }
         else
         {
             inputD = false;
         }
         
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             inputLAR = true;
         }
@@ -92,7 +93,7 @@ public class Movement_script : MonoBehaviour
             inputLAR = false;
         }
         
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             inputRAR = true;
         }
@@ -145,8 +146,7 @@ public class Movement_script : MonoBehaviour
                 leftlegbalance.targetRotation =  -200;
                 rightlegbalance.targetRotation = -200;
             }
-        
-            if (!inputS && !inputDAR)
+            else
             {
                 BodyBalanceScript.targetRotation = 0;
                 HeadBalanceScript.targetRotation = 0;
@@ -161,15 +161,16 @@ public class Movement_script : MonoBehaviour
                 StartCoroutine(MoveLeftfootleft(legWait));
                 facingleft = true;
             }
-
             //Left leg Right
-            if (inputD)
+            else if (inputD)
             {
+                Debug.Log(leftLegRB.totalForce.x);
+                Debug.Log("D leg move");
                 anim.Play("Glootle_LeftfootRight");
+                // we only want to do this in the case where there isnt already force being applied
                 StartCoroutine(MoveLeftfootRight(legWait));
                 facingleft = false;
             }
-
             //Right leg left
             if (inputLAR)
             {
@@ -179,13 +180,14 @@ public class Movement_script : MonoBehaviour
             }
 
             //Right leg Right
-            if (inputRAR)
+            else if (inputRAR)
             {
+                Debug.Log("RAR leg move");
                 anim.Play("Glootle_RightfootRight");
                 StartCoroutine(MoveRightfootRight(legWait));
                 facingleft = false;
             }
-
+            
             if (Input.GetAxisRaw("Horizontal") == 0)
             {
                 anim.Play("Glootle_idle");
