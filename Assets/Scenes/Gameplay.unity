@@ -257,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 57718619}
-  force: 50
+  force: 150
   BalanceScript: {fileID: 57718617}
 --- !u!233 &57718618
 HingeJoint2D:
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 163290304}
-  force: 50
+  force: 150
   BalanceScript: {fileID: 163290302}
 --- !u!233 &163290303
 HingeJoint2D:
@@ -1302,13 +1302,6 @@ MonoBehaviour:
   anim: {fileID: 210386376}
   speed: 1
   legWait: 0.5
-  jump: 3500
-  positionradius: 0.3
-  ground:
-    serializedVersion: 2
-    m_Bits: 8
-  playerpos: {fileID: 1474946179}
-  rb: {fileID: 1155962725}
   body: {fileID: 1155962720}
   milestext: {fileID: 1998960462}
   highscoretext: {fileID: 1066270960}
@@ -1601,13 +1594,6 @@ MonoBehaviour:
   anim: {fileID: 262384756}
   speed: 0.5
   legWait: 1
-  jump: 0.5
-  positionradius: 0
-  ground:
-    serializedVersion: 2
-    m_Bits: 0
-  playerpos: {fileID: 0}
-  rb: {fileID: 0}
   body: {fileID: 1811791002}
   milestext: {fileID: 1998960462}
   highscoretext: {fileID: 1066270960}
@@ -3560,7 +3546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1078513973}
-  force: 50
+  force: 150
   BalanceScript: {fileID: 1078513971}
 --- !u!233 &1078513972
 HingeJoint2D:
@@ -3900,7 +3886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1155962725}
-  force: 50
+  force: 150
   BalanceScript: {fileID: 1155962723}
 --- !u!50 &1155962725
 Rigidbody2D:
@@ -4254,7 +4240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1417871339}
-  force: 50
+  force: 150
   BalanceScript: {fileID: 1417871337}
 --- !u!233 &1417871338
 HingeJoint2D:
