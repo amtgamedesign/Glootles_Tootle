@@ -1302,7 +1302,7 @@ MonoBehaviour:
   anim: {fileID: 210386376}
   speed: 1
   legWait: 0.5
-  jump: 0
+  jump: 3500
   onground: 0
   positionradius: 0
   ground:
