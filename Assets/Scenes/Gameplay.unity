@@ -1302,6 +1302,14 @@ MonoBehaviour:
   anim: {fileID: 210386376}
   speed: 1
   legWait: 0.5
+  jump: 0
+  onground: 0
+  positionradius: 0
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
+  playerpos: {fileID: 1474946179}
+  rb: {fileID: 1155962725}
   body: {fileID: 1155962720}
   milestext: {fileID: 1998960462}
   highscoretext: {fileID: 1066270960}
@@ -1407,14 +1415,14 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.15210333, y: 5.376689}
-  m_ConnectedAnchor: {x: 0.14293242, y: -2.7441208}
+  m_ConnectedAnchor: {x: 0.1429324, y: -2.4993374}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
+    m_LowerAngle: 180
     m_UpperAngle: 180
 --- !u!50 &259786214
 Rigidbody2D:
@@ -1594,6 +1602,14 @@ MonoBehaviour:
   anim: {fileID: 262384756}
   speed: 0.5
   legWait: 1
+  jump: 0
+  onground: 0
+  positionradius: 0
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
+  playerpos: {fileID: 1474946179}
+  rb: {fileID: 1155962725}
   body: {fileID: 1811791002}
   milestext: {fileID: 1998960462}
   highscoretext: {fileID: 1066270960}
@@ -4067,7 +4083,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.10049942, y: 5.262792}
-  m_ConnectedAnchor: {x: 0.092957586, y: -2.9824245}
+  m_ConnectedAnchor: {x: 0.0929576, y: -2.6944458}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4500,7 +4516,7 @@ Transform:
   m_GameObject: {fileID: 1474946178}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05242855, y: -8.79, z: 0.0012165706}
+  m_LocalPosition: {x: 0.3, y: -9.22, z: 0.0012165706}
   m_LocalScale: {x: 3.333333, y: 2.3212628, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
