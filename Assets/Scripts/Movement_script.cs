@@ -175,22 +175,6 @@ public class Movement_script : MonoBehaviour
                 rb.AddForce(jump * Vector2.up);
             }
             
-            //Bending
-            if (inputS && inputDAR)
-            {
-                BodyBalanceScript.targetRotation = 50;
-                HeadBalanceScript.targetRotation = 50;
-                leftlegbalance.targetRotation =  -200;
-                rightlegbalance.targetRotation = -200;
-            }
-            else
-            {
-                BodyBalanceScript.targetRotation = 0;
-                HeadBalanceScript.targetRotation = 0;
-                leftlegbalance.targetRotation = 0;
-                rightlegbalance.targetRotation = 0;
-            }
-            
             if (Input.GetAxisRaw("Horizontal") == 0 || inputA && inputRAR || inputD && inputLAR || inputD && inputA || inputLAR && inputRAR)
             {
                 anim.Play("Glootle_idle");
@@ -233,6 +217,25 @@ public class Movement_script : MonoBehaviour
                 facingleft = false;
             }
             
+            
+            if (inputS && inputDAR)
+            {
+                BodyBalanceScript.targetRotation = 50;
+                HeadBalanceScript.targetRotation = 50;
+                 leftlegbalance.targetRotation =  100;
+                rightlegbalance.targetRotation =  100;
+                
+            }
+            else if (!inputS && !inputDAR)
+            {
+                BodyBalanceScript.targetRotation = 0;
+                HeadBalanceScript.targetRotation = 0;
+                 leftlegbalance.targetRotation = 0;
+                rightlegbalance.targetRotation = 0;
+            }
+            
+            
+            
         }
 
         
@@ -249,17 +252,16 @@ public class Movement_script : MonoBehaviour
             {
                 BodyBalanceScript.targetRotation = 50;
                 HeadBalanceScript.targetRotation = 50;
-                 leftlegbalance.force =  0;
-                rightlegbalance.force =  0;
+                leftlegbalance.targetRotation =  -200;
+                rightlegbalance.targetRotation = -200;
                 
             }
-        
-            if (!inputS || !inputUAR)
+            else if (!inputS || !inputUAR)
             {
                 BodyBalanceScript.targetRotation = 0;
                 HeadBalanceScript.targetRotation = 0;
-                 leftlegbalance.force =  100;
-                rightlegbalance.force =  100;
+                leftlegbalance.targetRotation = 0;
+                rightlegbalance.targetRotation = 0;
             }
 
             if (Input.GetAxisRaw("Horizontal") != 0)
