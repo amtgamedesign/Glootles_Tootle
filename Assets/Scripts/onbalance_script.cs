@@ -10,7 +10,7 @@ public class onbalance_script : MonoBehaviour
     public Balance_script balULL, balLLL, balbody, balURL, balLRL, balhead;
     public Animator glootleani;
     public bool backup = true;
-    public static bool bodydisengaged = false, gameover = false;
+    public static bool bodydisengaged = false, gameover = false, forcefix;
     public float stuntimer = 5, gameovertimer = 5;
     public Movement_script MovementScript;
 
@@ -63,6 +63,7 @@ public class onbalance_script : MonoBehaviour
             MovementScript.enabled = true;
             MovementScript.speed = 0.01f;
             stuntimer = 3;
+            forcefix = true;
         }
 
         if (backup == false)

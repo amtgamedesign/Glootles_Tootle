@@ -1332,7 +1332,7 @@ MonoBehaviour:
   balURL: {fileID: 163290302}
   balLRL: {fileID: 1417871337}
   balhead: {fileID: 1576178459}
-  glootleani: {fileID: 0}
+  glootleani: {fileID: 210386376}
   backup: 1
   stuntimer: 3
   gameovertimer: 5
@@ -1511,7 +1511,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259786211}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
