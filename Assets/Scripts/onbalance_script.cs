@@ -52,18 +52,17 @@ public class onbalance_script : MonoBehaviour
         
         if (stuntimer <= 0)
         {
+            backup = true;
+            bodydisengaged = false;
             balhead.enabled =true;
             balURL.enabled = true;
             balLLL.enabled = true;
             balbody.enabled =true;
             balLRL.enabled = true;
             balULL.enabled = true;
-
-            bodydisengaged = false;
-            stuntimer = 3;
-            backup = true;
             MovementScript.enabled = true;
-            MovementScript.speed = 0.03f;
+            MovementScript.speed = 0.01f;
+            stuntimer = 3;
         }
 
         if (backup == false)

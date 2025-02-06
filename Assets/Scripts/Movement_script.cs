@@ -93,6 +93,7 @@ public class Movement_script : MonoBehaviour
             inputLAR = false;
         }
         
+        
         if (Input.GetKey(KeyCode.RightArrow))
         {
             inputRAR = true;
@@ -100,6 +101,42 @@ public class Movement_script : MonoBehaviour
         else
         {
             inputRAR = false;
+        }
+        
+        
+        if (Input.GetKey(KeyCode.W))
+        {
+            inputW = true;
+        }
+        else
+        {
+            inputW = false;
+        }
+        
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            inputUAR = true;
+        }
+        else
+        {
+            inputUAR = false;
+        }
+        
+        if (Input.GetKey(KeyCode.S))
+        {
+            inputS = true;
+        }
+        else
+        {
+            inputS = false;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            inputDAR = true;
+        }
+        else
+        {
+            inputDAR = false;
         }
     }
 
@@ -135,6 +172,7 @@ public class Movement_script : MonoBehaviour
             onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
             if (onground == true && inputW && inputUAR)
             {
+                Debug.Log("button works");
                 rb.AddForce(jump * Vector2.up);
             }
             

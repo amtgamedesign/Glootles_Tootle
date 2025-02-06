@@ -1302,7 +1302,7 @@ MonoBehaviour:
   anim: {fileID: 210386376}
   speed: 0.03
   legWait: 0.5
-  jump: 3500
+  jump: 5000
   onground: 0
   positionradius: 0
   ground:
@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1155962725}
-  force: 100
+  force: 200
   BalanceScript: {fileID: 1155962723}
 --- !u!50 &1155962725
 Rigidbody2D:
