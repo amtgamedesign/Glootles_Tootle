@@ -1301,7 +1301,7 @@ MonoBehaviour:
   HeadBalanceScript: {fileID: 1576178459}
   anim: {fileID: 210386376}
   speed: 0.03
-  legWait: 0.5
+  legWait: 0.1
   jump: 3500
   onground: 0
   positionradius: 0
@@ -1310,6 +1310,7 @@ MonoBehaviour:
     m_Bits: 8
   playerpos: {fileID: 1474946179}
   rb: {fileID: 1155962725}
+  headrb: {fileID: 1576178461}
   body: {fileID: 1155962720}
   milestext: {fileID: 1998960462}
   highscoretext: {fileID: 1066270960}
@@ -1334,8 +1335,10 @@ MonoBehaviour:
   balhead: {fileID: 1576178459}
   glootleani: {fileID: 210386376}
   backup: 1
+  gravityfix: 0
   stuntimer: 3
   gameovertimer: 5
+  timesup: 3
   MovementScript: {fileID: 210386377}
 --- !u!114 &210386379
 MonoBehaviour:
@@ -1611,6 +1614,7 @@ MonoBehaviour:
     m_Bits: 8
   playerpos: {fileID: 1474946179}
   rb: {fileID: 1155962725}
+  headrb: {fileID: 0}
   body: {fileID: 1811791002}
   milestext: {fileID: 1998960462}
   highscoretext: {fileID: 1066270960}
@@ -1635,8 +1639,10 @@ MonoBehaviour:
   balhead: {fileID: 245236815}
   glootleani: {fileID: 0}
   backup: 1
+  gravityfix: 0
   stuntimer: 3
   gameovertimer: 5
+  timesup: 1
   MovementScript: {fileID: 262384757}
 --- !u!1 &307284981
 GameObject:
@@ -1893,7 +1899,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 0, z: -10}
+  m_LocalPosition: {x: -2.93, y: 0.41, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2517,8 +2523,8 @@ Transform:
   m_GameObject: {fileID: 660697651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.6614, y: -4.54, z: 0}
-  m_LocalScale: {x: 114.677605, y: 1, z: 1}
+  m_LocalPosition: {x: 32.6614, y: -5.1113, z: 0}
+  m_LocalScale: {x: 114.677605, y: 2.1426, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4122,7 +4128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1155962725}
-  force: 200
+  force: 100
   BalanceScript: {fileID: 1155962723}
 --- !u!50 &1155962725
 Rigidbody2D:
@@ -4823,7 +4829,7 @@ Transform:
   m_GameObject: {fileID: 1503395373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.19, y: 2.736, z: 0}
+  m_LocalPosition: {x: -20.29, y: 2.736, z: 0}
   m_LocalScale: {x: 16.855646, y: 14.5203085, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6407,8 +6413,10 @@ MonoBehaviour:
   balhead: {fileID: 0}
   glootleani: {fileID: 0}
   backup: 1
+  gravityfix: 0
   stuntimer: 5
   gameovertimer: 5
+  timesup: 1
   MovementScript: {fileID: 0}
 --- !u!114 &1828378152
 MonoBehaviour:
@@ -6473,8 +6481,8 @@ Transform:
   m_Children:
   - {fileID: 163290301}
   - {fileID: 1417871336}
-  - {fileID: 57718616}
   - {fileID: 1078513970}
+  - {fileID: 57718616}
   m_Father: {fileID: 210386375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!233 &1872043802
@@ -7071,11 +7079,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.14
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 1236916249951924675, guid: 3d5dee89b68ec38499088f9d2ac47cb1, type: 3}
       propertyPath: m_LocalPosition.z

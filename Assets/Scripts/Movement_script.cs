@@ -31,7 +31,7 @@ public class Movement_script : MonoBehaviour
     public float positionradius;
     public LayerMask ground;
     public Transform playerpos;
-    public Rigidbody2D rb;
+    public Rigidbody2D rb, headrb;
     
 
     public GameObject body;
@@ -249,8 +249,8 @@ public class Movement_script : MonoBehaviour
             {
                 BodyBalanceScript.targetRotation = 50;
                 HeadBalanceScript.targetRotation = 50;
-                leftlegbalance.targetRotation =  -200;
-                rightlegbalance.targetRotation = -200;
+                 leftlegbalance.force =  0;
+                rightlegbalance.force =  0;
                 
             }
         
@@ -258,8 +258,8 @@ public class Movement_script : MonoBehaviour
             {
                 BodyBalanceScript.targetRotation = 0;
                 HeadBalanceScript.targetRotation = 0;
-                leftlegbalance.targetRotation = 0;
-                rightlegbalance.targetRotation = 0;
+                 leftlegbalance.force =  100;
+                rightlegbalance.force =  100;
             }
 
             if (Input.GetAxisRaw("Horizontal") != 0)
