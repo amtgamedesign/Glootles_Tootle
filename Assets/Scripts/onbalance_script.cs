@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class onbalance_script : MonoBehaviour
 {
     public Balance_script balULL, balLLL, balbody, balURL, balLRL, balhead;
+    public Animator glootleani;
     public bool backup = true;
     public static bool bodydisengaged = false, gameover = false;
     public float stuntimer = 5, gameovertimer = 5;
@@ -46,6 +47,7 @@ public class onbalance_script : MonoBehaviour
             balULL.enabled = false;
             backup = false;
             MovementScript.speed = 0;
+            MovementScript.enabled = false;
         }
         
         if (stuntimer <= 0)
@@ -60,7 +62,8 @@ public class onbalance_script : MonoBehaviour
             bodydisengaged = false;
             stuntimer = 3;
             backup = true;
-            MovementScript.speed = 0.05f;
+            MovementScript.enabled = true;
+            MovementScript.speed = 0.03f;
         }
 
         if (backup == false)

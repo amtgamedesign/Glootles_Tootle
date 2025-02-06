@@ -257,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 57718619}
-  force: 150
+  force: 100
   BalanceScript: {fileID: 57718617}
 --- !u!233 &57718618
 HingeJoint2D:
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 163290304}
-  force: 150
+  force: 100
   BalanceScript: {fileID: 163290302}
 --- !u!233 &163290303
 HingeJoint2D:
@@ -1249,9 +1249,9 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1836021323}
   - {fileID: 1576178457}
   - {fileID: 1155962722}
+  - {fileID: 1836021323}
   - {fileID: 1985153744}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1300,7 +1300,7 @@ MonoBehaviour:
   rightlegbalance: {fileID: 163290302}
   HeadBalanceScript: {fileID: 1576178459}
   anim: {fileID: 210386376}
-  speed: 0.025
+  speed: 0.03
   legWait: 0.5
   jump: 3500
   onground: 0
@@ -1332,6 +1332,7 @@ MonoBehaviour:
   balURL: {fileID: 163290302}
   balLRL: {fileID: 1417871337}
   balhead: {fileID: 1576178459}
+  glootleani: {fileID: 0}
   backup: 1
   stuntimer: 3
   gameovertimer: 5
@@ -1632,6 +1633,7 @@ MonoBehaviour:
   balURL: {fileID: 1989655767}
   balLRL: {fileID: 1828378152}
   balhead: {fileID: 245236815}
+  glootleani: {fileID: 0}
   backup: 1
   stuntimer: 3
   gameovertimer: 5
@@ -3734,7 +3736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1078513973}
-  force: 150
+  force: 100
   BalanceScript: {fileID: 1078513971}
 --- !u!233 &1078513972
 HingeJoint2D:
@@ -4074,7 +4076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1155962725}
-  force: 150
+  force: 100
   BalanceScript: {fileID: 1155962723}
 --- !u!50 &1155962725
 Rigidbody2D:
@@ -4428,7 +4430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   rb: {fileID: 1417871339}
-  force: 150
+  force: 100
   BalanceScript: {fileID: 1417871337}
 --- !u!233 &1417871338
 HingeJoint2D:
@@ -6357,6 +6359,7 @@ MonoBehaviour:
   balURL: {fileID: 0}
   balLRL: {fileID: 0}
   balhead: {fileID: 0}
+  glootleani: {fileID: 0}
   backup: 1
   stuntimer: 5
   gameovertimer: 5

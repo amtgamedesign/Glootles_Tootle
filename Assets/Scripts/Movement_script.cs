@@ -154,15 +154,19 @@ public class Movement_script : MonoBehaviour
                 rightlegbalance.targetRotation = 0;
             }
             
+            if (Input.GetAxisRaw("Horizontal") == 0 || inputA && inputRAR || inputD && inputLAR || inputD && inputA || inputLAR && inputRAR)
+            {
+                anim.Play("Glootle_idle");
+            }
             //Left leg left
-            if (inputA)
+            else if (inputA && !inputLAR)
             {
                 anim.Play("Glootle_Leftfootleft");
                 StartCoroutine(MoveLeftfootleft(legWait));
                 facingleft = true;
             }
             //Left leg Right
-            else if (inputD)
+            else if (inputD && !inputRAR)
             {
                 Debug.Log(leftLegRB.totalForce.x);
                 Debug.Log("D leg move");
@@ -171,16 +175,20 @@ public class Movement_script : MonoBehaviour
                 StartCoroutine(MoveLeftfootRight(legWait));
                 facingleft = false;
             }
+            
+            if (Input.GetAxisRaw("Horizontal") == 0 || inputA && inputRAR || inputD && inputLAR || inputD && inputA || inputLAR && inputRAR)
+            {
+                anim.Play("Glootle_idle");
+            }
             //Right leg left
-            if (inputLAR)
+            else if (inputLAR && !inputA)
             {
                 anim.Play("Glootle_Rightfootleft");
                 StartCoroutine(MoveRightfootLeft(legWait));
                 facingleft = true;
             }
-
             //Right leg Right
-            else if (inputRAR)
+            else if (inputRAR && !inputD)
             {
                 Debug.Log("RAR leg move");
                 anim.Play("Glootle_RightfootRight");
@@ -188,10 +196,6 @@ public class Movement_script : MonoBehaviour
                 facingleft = false;
             }
             
-            if (Input.GetAxisRaw("Horizontal") == 0)
-            {
-                anim.Play("Glootle_idle");
-            }
         }
 
         
