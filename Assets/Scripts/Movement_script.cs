@@ -172,7 +172,6 @@ public class Movement_script : MonoBehaviour
             onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
             if (onground == true && inputW && inputUAR)
             {
-                Debug.Log("button works");
                 rb.AddForce(jump * Vector2.up);
             }
             
