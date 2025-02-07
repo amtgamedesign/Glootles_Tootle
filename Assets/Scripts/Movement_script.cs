@@ -222,8 +222,8 @@ public class Movement_script : MonoBehaviour
             {
                 BodyBalanceScript.targetRotation = 50;
                 HeadBalanceScript.targetRotation = 50;
-                 leftlegbalance.targetRotation =  100;
-                rightlegbalance.targetRotation =  100;
+                 leftlegbalance.targetRotation =  50;
+                rightlegbalance.targetRotation =  50;
                 
             }
             else if (!inputS && !inputDAR)
