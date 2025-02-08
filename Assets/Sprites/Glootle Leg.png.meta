@@ -131,7 +131,7 @@ TextureImporter:
         width: 255
         height: 317
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 255
         height: 364
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,6 +160,27 @@ TextureImporter:
       bones: []
       spriteID: f34b17160b005344ab9b2a35e2057e1e
       internalID: 271362263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glootle Leg_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 293
+        width: 100
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1855f69972894ea449774eb0650cb52d
+      internalID: -824164504
       vertices: []
       indices: 
       edges: []
@@ -177,6 +198,7 @@ TextureImporter:
     nameFileIdTable:
       Glootle Leg_0: -917149345
       Glootle Leg_1: 271362263
+      Glootle Leg_2: -824164504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

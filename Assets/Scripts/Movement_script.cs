@@ -77,7 +77,6 @@ public class Movement_script : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             inputD = true;
-            Debug.Log("inputD = true");
         }
         else
         {
@@ -147,7 +146,7 @@ public class Movement_script : MonoBehaviour
         if (keypressduration <= 0)
         {
             keypressduration = 0;
-          //  anim.enabled = true;
+            anim.enabled = true;
         }
     }
 
@@ -215,7 +214,6 @@ public class Movement_script : MonoBehaviour
             //Right leg Right
             else if (inputRAR && !inputD)
             {
-                Debug.Log("RAR leg move");
                 anim.Play("Glootle_RightfootRight");
                 StartCoroutine(MoveRightfootRight(legWait));
                 facingleft = false;
@@ -227,20 +225,18 @@ public class Movement_script : MonoBehaviour
                 anim.Play("Glootle_idle");
             }
             
-            
             if (inputS && inputDAR)
             {
-                anim.Play("Glootles_bending");
-               // anim.enabled = false;
+                    anim.enabled = false;
                 BodyBalanceScript.targetRotation = keypressduration;
                 HeadBalanceScript.targetRotation = keypressduration;
-                 //  leftlegbalance.targetRotation =  keypressduration;
-                 // rightlegbalance.targetRotation =  keypressduration;
-                keypressduration += 2;
+                  leftlegbalance.targetRotation =  keypressduration;
+                 rightlegbalance.targetRotation =  keypressduration;
+                    keypressduration += 2;
             }
-            else if (!inputS && !inputDAR)
+            else if (!inputS && !inputDAR && !inputA && !inputD && !inputLAR && !inputRAR && !inputUAR && !inputW)
             {
-                //&& !inputA && !inputD && !inputLAR && !inputRAR && !inputUAR && !inputW
+                
                 BodyBalanceScript.targetRotation = keypressduration;
                 HeadBalanceScript.targetRotation = keypressduration;
                    leftlegbalance.targetRotation = keypressduration;
