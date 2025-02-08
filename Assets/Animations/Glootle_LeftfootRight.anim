@@ -43,7 +43,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: targetRotation
-    path: Legs/G_Upper_LL
+    path: Test/G_Upper_LL
     classID: 114
     script: {fileID: 11500000, guid: 2c3b24adc32b981458b60ddb730514ad, type: 3}
     flags: 0
@@ -74,7 +74,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2586870282
+      path: 301855745
       attribute: 1865065137
       script: {fileID: 11500000, guid: 2c3b24adc32b981458b60ddb730514ad, type: 3}
       typeID: 114
@@ -131,7 +131,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: targetRotation
-    path: Legs/G_Upper_LL
+    path: Test/G_Upper_LL
     classID: 114
     script: {fileID: 11500000, guid: 2c3b24adc32b981458b60ddb730514ad, type: 3}
     flags: 0

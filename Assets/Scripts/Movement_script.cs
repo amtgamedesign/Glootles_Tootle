@@ -138,6 +138,17 @@ public class Movement_script : MonoBehaviour
         {
             inputDAR = false;
         }
+        
+        if (keypressduration >= 60)
+        {
+            keypressduration = 60;
+        }
+            
+        if (keypressduration <= 0)
+        {
+            keypressduration = 0;
+          //  anim.enabled = true;
+        }
     }
 
     // Update is called once per frame
@@ -189,17 +200,10 @@ public class Movement_script : MonoBehaviour
             //Left leg Right
             else if (inputD && !inputRAR)
             {
-                Debug.Log(leftLegRB.totalForce.x);
-                Debug.Log("D leg move");
                 anim.Play("Glootle_LeftfootRight");
                 // we only want to do this in the case where there isnt already force being applied
                 StartCoroutine(MoveLeftfootRight(legWait));
                 facingleft = false;
-            }
-            
-            if (Input.GetAxisRaw("Horizontal") == 0 || inputA && inputRAR || inputD && inputLAR || inputD && inputA || inputLAR && inputRAR)
-            {
-                anim.Play("Glootle_idle");
             }
             //Right leg left
             else if (inputLAR && !inputA)
@@ -218,20 +222,30 @@ public class Movement_script : MonoBehaviour
             }
             
             
+            if (Input.GetAxisRaw("Horizontal") == 0 || inputA && inputRAR || inputD && inputLAR || inputD && inputA || inputLAR && inputRAR)
+            {
+                anim.Play("Glootle_idle");
+            }
+            
+            
             if (inputS && inputDAR)
             {
-                BodyBalanceScript.targetRotation = 100;
-                HeadBalanceScript.targetRotation = 100;
-                 leftlegbalance.targetRotation =  keypressduration += 1;
-                rightlegbalance.targetRotation =  keypressduration += 1;
-
+                anim.Play("Glootles_bending");
+               // anim.enabled = false;
+                BodyBalanceScript.targetRotation = keypressduration;
+                HeadBalanceScript.targetRotation = keypressduration;
+                 //  leftlegbalance.targetRotation =  keypressduration;
+                 // rightlegbalance.targetRotation =  keypressduration;
+                keypressduration += 2;
             }
             else if (!inputS && !inputDAR)
             {
-                BodyBalanceScript.targetRotation = 0;
-                HeadBalanceScript.targetRotation = 0;
-                 leftlegbalance.targetRotation = keypressduration -= 1;
-                rightlegbalance.targetRotation = keypressduration -= 1;
+                //&& !inputA && !inputD && !inputLAR && !inputRAR && !inputUAR && !inputW
+                BodyBalanceScript.targetRotation = keypressduration;
+                HeadBalanceScript.targetRotation = keypressduration;
+                   leftlegbalance.targetRotation = keypressduration;
+                  rightlegbalance.targetRotation = keypressduration;
+                keypressduration -= 2;
             }
             
             
