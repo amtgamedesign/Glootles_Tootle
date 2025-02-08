@@ -24,7 +24,7 @@ public class Movement_script : MonoBehaviour
     public Animator anim;
     
     //Speed and how long it takes for a leg to change
-    public float speed = 2f;
+    public float speed = 2f, keypressduration;
     [SerializeField] float legWait = .5f;
     [SerializeField] float jump;
     public bool onground;
@@ -220,18 +220,18 @@ public class Movement_script : MonoBehaviour
             
             if (inputS && inputDAR)
             {
-                BodyBalanceScript.targetRotation = 50;
-                HeadBalanceScript.targetRotation = 50;
-                 leftlegbalance.targetRotation =  50;
-                rightlegbalance.targetRotation =  50;
-                
+                BodyBalanceScript.targetRotation = 100;
+                HeadBalanceScript.targetRotation = 100;
+                 leftlegbalance.targetRotation =  keypressduration += 1;
+                rightlegbalance.targetRotation =  keypressduration += 1;
+
             }
             else if (!inputS && !inputDAR)
             {
                 BodyBalanceScript.targetRotation = 0;
                 HeadBalanceScript.targetRotation = 0;
-                 leftlegbalance.targetRotation = 0;
-                rightlegbalance.targetRotation = 0;
+                 leftlegbalance.targetRotation = keypressduration -= 1;
+                rightlegbalance.targetRotation = keypressduration -= 1;
             }
             
             
