@@ -60,8 +60,8 @@ public class onbalance_script : MonoBehaviour
             balLLL.enabled = true;
             balLRL.enabled = true;
             balULL.enabled = true;
-            MovementScript.rb.gravityScale = 20;
-            MovementScript.headrb.gravityScale = 20;
+            MovementScript.rb.gravityScale = 15;
+            MovementScript.headrb.gravityScale = 15;
             MovementScript.speed = 0.03f;
             stuntimer = 3;
             MovementScript.enabled = true;
