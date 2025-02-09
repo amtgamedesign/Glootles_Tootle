@@ -27,10 +27,10 @@ public class Movement_script : MonoBehaviour
     public float speed = 2f, keypressduration;
     [SerializeField] float legWait = .5f;
     [SerializeField] float jump;
-    public bool onground;
+    public bool ongroundLLL, ongroundLRL;
     public float positionradius;
     public LayerMask ground;
-    public Transform playerpos;
+    public Transform playerposLLL, playerposLRL;
     public Rigidbody2D rb, headrb;
     
 
@@ -138,9 +138,9 @@ public class Movement_script : MonoBehaviour
             inputDAR = false;
         }
         
-        if (keypressduration >= 60)
+        if (keypressduration >= 75)
         {
-            keypressduration = 60;
+            keypressduration = 75;
         }
             
         if (keypressduration <= 0)
@@ -179,8 +179,10 @@ public class Movement_script : MonoBehaviour
         //This is two player:
         if (Legtype == true)
         {
-            onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
-            if (onground == true && inputW && inputUAR)
+            //Jumping
+            ongroundLLL = Physics2D.OverlapCircle(playerposLLL.position, positionradius, ground);
+            ongroundLRL = Physics2D.OverlapCircle(playerposLRL.position, positionradius, ground);
+            if (ongroundLLL == true && inputW && inputUAR || ongroundLRL == true && inputW && inputUAR || ongroundLLL == true && ongroundLRL == true && inputW && inputUAR)
             {
                 rb.AddForce(jump * Vector2.up);
             }
@@ -219,12 +221,13 @@ public class Movement_script : MonoBehaviour
                 facingleft = false;
             }
             
-            
+            //Idleing
             if (Input.GetAxisRaw("Horizontal") == 0 || inputA && inputRAR || inputD && inputLAR || inputD && inputA || inputLAR && inputRAR)
             {
                 anim.Play("Glootle_idle");
             }
             
+            //Bending
             if (inputS && inputDAR)
             {
                     anim.enabled = false;
@@ -232,7 +235,7 @@ public class Movement_script : MonoBehaviour
                 HeadBalanceScript.targetRotation = keypressduration;
                   leftlegbalance.targetRotation =  keypressduration;
                  rightlegbalance.targetRotation =  keypressduration;
-                    keypressduration += 2;
+                    keypressduration += 3;
             }
             else if (!inputS && !inputDAR && !inputA && !inputD && !inputLAR && !inputRAR && !inputUAR && !inputW)
             {
@@ -241,58 +244,60 @@ public class Movement_script : MonoBehaviour
                 HeadBalanceScript.targetRotation = keypressduration;
                    leftlegbalance.targetRotation = keypressduration;
                   rightlegbalance.targetRotation = keypressduration;
-                keypressduration -= 2;
+                keypressduration -= 3;
             }
             
             
             
         }
 
-        
-        //This is one player
-        if (Legtype == false)
         {
-            onground = Physics2D.OverlapCircle(playerpos.position, positionradius, ground);
-            if (onground == true && Input.GetKeyDown(KeyCode.W) || onground == true && Input.GetKeyDown(KeyCode.Space))
+            //This is one player
+            if (Legtype == false)
             {
-                rb.AddForce(jump * Vector2.up);
-            }
-            
-            if (inputS || inputUAR)
-            {
-                BodyBalanceScript.targetRotation = 50;
-                HeadBalanceScript.targetRotation = 50;
-                leftlegbalance.targetRotation =  -200;
-                rightlegbalance.targetRotation = -200;
-                
-            }
-            else if (!inputS || !inputUAR)
-            {
-                BodyBalanceScript.targetRotation = 0;
-                HeadBalanceScript.targetRotation = 0;
-                leftlegbalance.targetRotation = 0;
-                rightlegbalance.targetRotation = 0;
-            }
-
-            if (Input.GetAxisRaw("Horizontal") != 0)
-            {
-                if (Input.GetAxis("Horizontal") > 0)
+                ongroundLLL = Physics2D.OverlapCircle(playerposLLL.position, positionradius, ground);
+                if (ongroundLLL == true && Input.GetKeyDown(KeyCode.W) ||
+                    ongroundLLL == true && Input.GetKeyDown(KeyCode.Space))
                 {
-                    anim.Play("Glootle_WalkRight");
-                    StartCoroutine(MoveRight(legWait));
-                    facingleft = false;
+                    rb.AddForce(jump * Vector2.up);
+                }
+
+                if (inputS || inputUAR)
+                {
+                    BodyBalanceScript.targetRotation = 50;
+                    HeadBalanceScript.targetRotation = 50;
+                    leftlegbalance.targetRotation = -200;
+                    rightlegbalance.targetRotation = -200;
+
+                }
+                else if (!inputS || !inputUAR)
+                {
+                    BodyBalanceScript.targetRotation = 0;
+                    HeadBalanceScript.targetRotation = 0;
+                    leftlegbalance.targetRotation = 0;
+                    rightlegbalance.targetRotation = 0;
+                }
+
+                if (Input.GetAxisRaw("Horizontal") != 0)
+                {
+                    if (Input.GetAxis("Horizontal") > 0)
+                    {
+                        anim.Play("Glootle_WalkRight");
+                        StartCoroutine(MoveRight(legWait));
+                        facingleft = false;
+                    }
+                    else
+                    {
+                        anim.Play("Glootle_WalkLeft");
+                        StartCoroutine(MoveLeft(legWait));
+                        facingleft = true;
+                    }
+
                 }
                 else
                 {
-                    anim.Play("Glootle_WalkLeft");
-                    StartCoroutine(MoveLeft(legWait));
-                    facingleft = true;
+                    anim.Play("Glootle_idle");
                 }
-
-            }
-            else
-            {
-                anim.Play("Glootle_idle");
             }
         }
 
