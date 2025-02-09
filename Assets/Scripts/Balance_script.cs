@@ -32,12 +32,6 @@ public class Balance_script : MonoBehaviour
             Destroy(other.gameObject);
         }
         
-        boxstun_script boxstun = other.gameObject.GetComponent<boxstun_script>();
-        if (boxstun != null)
-        {
-            onbalance_script.bodydisengaged = true;
-        }
-        
     }
 
     public void OnTriggerStay2D(Collider2D other)
@@ -47,7 +41,11 @@ public class Balance_script : MonoBehaviour
         {
             onbalance_script.gameover = true;
         }
-        
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+            
         boxstun_script boxstun = other.gameObject.GetComponent<boxstun_script>();
         if (boxstun != null)
         {
