@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Shot_script : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public float anidone;
+    public Animator shotani;
+    
     // Update is called once per frame
     void Update()
     {
-        
+        shotani.Play("Shot_animation");
+        anidone -= Time.deltaTime;
+        if (anidone <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
