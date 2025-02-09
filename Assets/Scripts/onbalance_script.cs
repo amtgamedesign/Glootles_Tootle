@@ -17,7 +17,7 @@ public class onbalance_script : MonoBehaviour
     
     public GameObject body;
     public TextMeshPro milestext, highscoretext, Timertext;
-    public float miles, EndTimer;
+    public float miles, EndTimer, Thehighscore;
     // Update is called once per frame
 
     public void Start()
@@ -40,13 +40,12 @@ public class onbalance_script : MonoBehaviour
         EndTimer += Time.deltaTime;
         Timertext.text = "Time: " + EndTimer.ToString("F");
         
-        float Thehighscore = PlayerPrefs.GetFloat("highscore", 0);
         highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
-        
-        if (EndTimer > PlayerPrefs.GetFloat("highscore", 0))
+        if (EndTimer < PlayerPrefs.GetFloat("highscore", Thehighscore))
         {
-            PlayerPrefs.SetFloat("highscore", EndTimer);
+            PlayerPrefs.SetFloat("highscore", Thehighscore);
         }
+        
         
         // if (miles > PlayerPrefs.GetFloat("highscore", 0))
         // {
@@ -55,7 +54,6 @@ public class onbalance_script : MonoBehaviour
         
         if (gameover == true)
         {
-            test += 1;
             glootleani.Play("Glootle_perish");
             MovementScript.enabled = false;
             balhead.enabled = false;
@@ -74,7 +72,8 @@ public class onbalance_script : MonoBehaviour
             bodydisengaged = false;
             gameover = false;
             gameovertimer = 5;
-            PlayerPrefs.SetFloat("highscore",Thehighscore);
+            Thehighscore = PlayerPrefs.GetFloat("highscore", EndTimer);
+            highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
         }
 
         if (bodydisengaged == true)

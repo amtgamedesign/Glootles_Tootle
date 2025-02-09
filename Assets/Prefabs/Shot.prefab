@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac390d09601e4eb48992ae49f7dbcb55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anidone: 4
+  anidone: 2
   shotani: {fileID: 7815348703952294732}
 --- !u!95 &7815348703952294732
 Animator:
