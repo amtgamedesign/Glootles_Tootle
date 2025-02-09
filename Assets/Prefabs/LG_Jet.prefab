@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8786496889505999187}
   - component: {fileID: 6019323108349007339}
   - component: {fileID: 5201978273688206096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LG_Jet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

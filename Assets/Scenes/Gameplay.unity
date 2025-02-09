@@ -1411,7 +1411,7 @@ Transform:
   m_GameObject: {fileID: 238985881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.402216, y: 3.3149233, z: 0.27849558}
+  m_LocalPosition: {x: 9, y: 3.71, z: 0.27849558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2870,7 +2870,7 @@ Transform:
   m_GameObject: {fileID: 714781594}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2019157, y: 0.31507683, z: -0.27849558}
+  m_LocalPosition: {x: -0.7996998, y: -0.07999992, z: -0.27849558}
   m_LocalScale: {x: 1.9193, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2957,7 +2957,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4550,7 +4550,7 @@ Transform:
   m_GameObject: {fileID: 1375998148}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.322216, y: 0.7250767, z: -0.27849558}
+  m_LocalPosition: {x: 0.07999992, y: 0.32999992, z: -0.27849558}
   m_LocalScale: {x: 1.9193, y: 1.2261, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4637,7 +4637,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7746,7 +7746,7 @@ Transform:
   m_GameObject: {fileID: 2081371306}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5422163, y: 0.3050766, z: -0.27849558}
+  m_LocalPosition: {x: 0.85999966, y: -0.09000015, z: -0.27849558}
   m_LocalScale: {x: 1.9193, y: 1.2261, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7833,7 +7833,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
