@@ -8,7 +8,7 @@ public class Shot_script : MonoBehaviour
     public Animator shotani;
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         shotani.Play("Shot_animation");
         anidone -= Time.deltaTime;
