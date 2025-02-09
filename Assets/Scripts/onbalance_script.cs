@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,10 +14,35 @@ public class onbalance_script : MonoBehaviour
     public static bool bodydisengaged = false, gameover = false;
     public float stuntimer = 5, gameovertimer = 5, timesup;
     public Movement_script MovementScript;
-
+    
+    public GameObject body;
+    public TextMeshPro milestext, highscoretext, Timertext;
+    public float miles, EndTimer;
     // Update is called once per frame
+
+    public void Update()
+    {
+        EndTimer += Time.deltaTime;
+        Timertext.text = "Time: " + EndTimer.ToString("F");
+    }
+
     void FixedUpdate()
     {
+        //tracks and displays: meters and high score
+        miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
+        milestext.text = "Miles: " + miles+ "m";
+        highscoretext.text = $"High Score: {PlayerPrefs.GetFloat("highscore",0).ToString("F")}";
+        if (EndTimer > PlayerPrefs.GetFloat("highscore", 0))
+        {
+            PlayerPrefs.SetFloat("highscore", EndTimer);
+            
+        }
+        
+        // if (miles > PlayerPrefs.GetFloat("highscore", 0))
+        // {
+        //     PlayerPrefs.SetFloat("highscore", miles);
+        // }
+        
         if (gameover == true)
         {
             glootleani.Play("Glootle_perish");

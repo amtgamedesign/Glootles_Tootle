@@ -35,8 +35,6 @@ public class Movement_script : MonoBehaviour
     
 
     public GameObject body;
-    public TextMeshPro milestext, highscoretext;
-    public float miles;
     
     // private var
     private bool inputA = false;
@@ -156,14 +154,6 @@ public class Movement_script : MonoBehaviour
         // PlayerPrefs.SetFloat("HighScore", miles);
         // PlayerPrefs.GetFloat("HighScore");
         
-        //tracks and displays: meters and high score
-        miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
-        milestext.text = "Miles: " + miles+ "m";
-        highscoretext.text = $"High Score: {PlayerPrefs.GetFloat("highscore",0)}";
-        if (miles > PlayerPrefs.GetFloat("highscore", 0))
-        {
-            PlayerPrefs.SetFloat("highscore", miles);
-        }
         
         //Changes leg types
         if (Input.GetKey(KeyCode.Alpha1))
