@@ -58,7 +58,7 @@ public class Movement_script : MonoBehaviour
         rightlegbalance = rightLeg.GetComponent<Balance_script>();
         
         anim = GetComponent<Animator>();
-       // PlayerPrefs.SetInt("highscore",0);
+      
     }
 
     void Update()
