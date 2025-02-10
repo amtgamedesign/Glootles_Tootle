@@ -39,12 +39,6 @@ public class onbalance_script : MonoBehaviour
         // Debug.Log(EndTimer);
         // Debug.Log(firsttime);
         
-        Debug.Log(stuntimer);
-         Debug.Log(bodydisengaged);
-         Debug.Log(gameovertimer);
-         Debug.Log(gameover);
-        
-        
         //tracks and displays: meters and high score
         miles = (float)(Mathf.Round(body.transform.position.x * 10) / 10.0);
         milestext.text = "Miles: " + miles+ "m";
@@ -91,7 +85,7 @@ public class onbalance_script : MonoBehaviour
 
         if (bodydisengaged == true)
         {
-            glootleani.Play("stunned_ani");
+            glootleani.Play("Glootle_stunned");
             balhead.enabled = false;
             balURL.enabled = false;
             balLLL.enabled = false;
