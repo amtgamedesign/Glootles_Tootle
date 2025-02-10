@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shot_script : MonoBehaviour
 {
-    
     public float anidone;
     public Animator shotani;
     

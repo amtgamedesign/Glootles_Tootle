@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8786496889505999187}
   - component: {fileID: 6019323108349007339}
   - component: {fileID: 5201978273688206096}
+  - component: {fileID: 4661760598227177906}
   m_Layer: 7
   m_Name: LG_Jet
   m_TagString: Untagged
@@ -354,3 +355,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4661760598227177906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8904973885036602563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc1f662fb271284c958b1c8667ed288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6782131779643636952}
-  - component: {fileID: 1341854950151910210}
-  - component: {fileID: 1339571806075113155}
-  - component: {fileID: -8439992203007938073}
-  - component: {fileID: 4133647500655877558}
+  - component: {fileID: 6328210242961497849}
   - component: {fileID: -8252429285966031914}
+  - component: {fileID: 4133647500655877558}
+  - component: {fileID: 1341854950151910210}
+  - component: {fileID: -8439992203007938073}
+  - component: {fileID: 1339571806075113155}
   m_Layer: 7
   m_Name: Car Red
   m_TagString: Untagged
@@ -36,6 +37,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6328210242961497849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600249717901910399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc1f662fb271284c958b1c8667ed288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8252429285966031914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600249717901910399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ae3fc366ad184449d40ce24ee66db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SR: {fileID: 1341854950151910210}
+  carcolors:
+  - {fileID: 21300000, guid: 243b67e538ae6f44e94c76566d6bf419, type: 3}
+  - {fileID: 21300000, guid: c9eb8b2dc55d96f47ac0dac508108743, type: 3}
+  - {fileID: 21300000, guid: 8f9696c6b021471488481f96a414cdcd, type: 3}
+  - {fileID: 21300000, guid: 8982f229a156bef48910e78f3fbbf1c0, type: 3}
+  - {fileID: 21300000, guid: 243b67e538ae6f44e94c76566d6bf419, type: 3}
+  randomnumber: 0
+  min: 0
+  max: 4
+--- !u!114 &4133647500655877558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600249717901910399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb0c40c264bee94295a77229e32679e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RB: {fileID: -8439992203007938073}
+  xfloat: -2
+  yfloat: 0
+  ydestroy: -5
+  xdestroy: -25
 --- !u!212 &1341854950151910210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88,6 +140,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &-8439992203007938073
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600249717901910399}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &1339571806075113155
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -217,69 +296,3 @@ PolygonCollider2D:
       - {x: -1.6949999, y: -2.5149999}
       - {x: -1.4549999, y: -2.305}
   m_UseDelaunayMesh: 0
---- !u!50 &-8439992203007938073
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2600249717901910399}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &4133647500655877558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2600249717901910399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb0c40c264bee94295a77229e32679e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RB: {fileID: -8439992203007938073}
-  xfloat: -2
-  yfloat: 0
-  ydestroy: -5
-  xdestroy: -25
---- !u!114 &-8252429285966031914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2600249717901910399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ae3fc366ad184449d40ce24ee66db5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SR: {fileID: 1341854950151910210}
-  carcolors:
-  - {fileID: 21300000, guid: 243b67e538ae6f44e94c76566d6bf419, type: 3}
-  - {fileID: 21300000, guid: c9eb8b2dc55d96f47ac0dac508108743, type: 3}
-  - {fileID: 21300000, guid: 8f9696c6b021471488481f96a414cdcd, type: 3}
-  - {fileID: 21300000, guid: 8982f229a156bef48910e78f3fbbf1c0, type: 3}
-  - {fileID: 21300000, guid: 243b67e538ae6f44e94c76566d6bf419, type: 3}
-  randomnumber: 0
-  min: 0
-  max: 4

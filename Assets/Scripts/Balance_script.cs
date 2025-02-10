@@ -25,8 +25,12 @@ public class Balance_script : MonoBehaviour
     
     public void OnCollisionEnter2D(Collision2D other)
     {
-    
-        
+        stun_script stunScript = other.gameObject.GetComponent<stun_script>();
+        if (stunScript != null)
+        {
+            onbalance_script.bodydisengaged = true;
+            Destroy(other.gameObject);
+        }
     }
 
     public void OnTriggerStay2D(Collider2D other)
@@ -40,12 +44,17 @@ public class Balance_script : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        
+        stuntrigger_script stuntriggerScript = other.gameObject.GetComponent<stuntrigger_script>();
+        if (stuntriggerScript != null)
+        {
+            onbalance_script.bodydisengaged = true;
+        }
         
         Shot_script shotScript = other.gameObject.GetComponent<Shot_script>();
         if (shotScript != null)
         {
             onbalance_script.bodydisengaged = true;
         }
+        
     }
 }
