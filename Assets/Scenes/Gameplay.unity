@@ -1377,6 +1377,7 @@ MonoBehaviour:
   miles: 0
   EndTimer: 0
   Thehighscore: 0
+  savedHS: 0
 --- !u!114 &210386379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,6 +1738,7 @@ MonoBehaviour:
   miles: 0
   EndTimer: 0
   Thehighscore: 0
+  savedHS: 0
 --- !u!1 &307284981
 GameObject:
   m_ObjectHideFlags: 0
@@ -7098,6 +7100,7 @@ MonoBehaviour:
   miles: 0
   EndTimer: 0
   Thehighscore: 0
+  savedHS: 0
 --- !u!114 &1828378152
 MonoBehaviour:
   m_ObjectHideFlags: 0

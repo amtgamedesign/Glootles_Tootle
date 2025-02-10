@@ -17,13 +17,13 @@ public class onbalance_script : MonoBehaviour
     
     public GameObject body;
     public TextMeshPro milestext, highscoretext, Timertext;
-    public float miles, EndTimer, Thehighscore;
+    public float miles, EndTimer, Thehighscore, savedHS;
     // Update is called once per frame
 
     public void Start()
     {
         // PlayerPrefs.SetInt("highscore",0);
-        
+        Thehighscore = PlayerPrefs.GetFloat("highscore", savedHS);
     }
 
     public void Update()
@@ -33,18 +33,24 @@ public class onbalance_script : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log(savedHS);
+        Debug.Log(EndTimer);
+        Debug.Log(Thehighscore);
+        
         //tracks and displays: meters and high score
         miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
         milestext.text = "Miles: " + miles+ "m";
         
         EndTimer += Time.deltaTime;
         Timertext.text = "Time: " + EndTimer.ToString("F");
-        
         highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
-        if (EndTimer < PlayerPrefs.GetFloat("highscore", Thehighscore))
-        {
-            PlayerPrefs.SetFloat("highscore", Thehighscore);
-        }
+        
+        
+        
+        // if (EndTimer < PlayerPrefs.GetFloat("highscore", Thehighscore))
+        // {
+        //     PlayerPrefs.SetFloat("highscore", Thehighscore);
+        // }
         
         
         // if (miles > PlayerPrefs.GetFloat("highscore", 0))
@@ -68,12 +74,11 @@ public class onbalance_script : MonoBehaviour
 
         if (gameovertimer <= 0)
         {
+            savedHS = PlayerPrefs.GetFloat("highscore", EndTimer);
             SceneManager.LoadScene("Gameplay");
             bodydisengaged = false;
             gameover = false;
             gameovertimer = 5;
-            Thehighscore = PlayerPrefs.GetFloat("highscore", EndTimer);
-            highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
         }
 
         if (bodydisengaged == true)
