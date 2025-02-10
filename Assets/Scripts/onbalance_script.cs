@@ -25,15 +25,26 @@ public class onbalance_script : MonoBehaviour
     {
         // PlayerPrefs.SetInt("highscore",0);
         EndTimer = 0;
+        gameovertimer = 5;
+        bodydisengaged = false;
+        timesup = 3;
+        gameover = false;
     }
     
 
     void FixedUpdate()
     {
-        Debug.Log(Thehighscore);
-        Debug.Log(savedHS);
-        Debug.Log(EndTimer);
-        Debug.Log(firsttime);
+        // Debug.Log(Thehighscore);
+        // Debug.Log(savedHS);
+        // Debug.Log(EndTimer);
+        // Debug.Log(firsttime);
+        
+        Debug.Log(stuntimer);
+         Debug.Log(bodydisengaged);
+         Debug.Log(gameovertimer);
+         Debug.Log(gameover);
+        
+        
         //tracks and displays: meters and high score
         miles = (float)(Mathf.Round(body.transform.position.x * 10) / 10.0);
         milestext.text = "Miles: " + miles+ "m";
@@ -80,7 +91,7 @@ public class onbalance_script : MonoBehaviour
 
         if (bodydisengaged == true)
         {
-            glootleani.Play("Glootle_perish");
+            glootleani.Play("stunned_ani");
             balhead.enabled = false;
             balURL.enabled = false;
             balLLL.enabled = false;
