@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boxstun_script : MonoBehaviour
+public class stun_script : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
