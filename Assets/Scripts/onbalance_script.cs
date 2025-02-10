@@ -11,7 +11,7 @@ public class onbalance_script : MonoBehaviour
     public Balance_script balULL, balLLL, balbody, balURL, balLRL, balhead;
     public Animator glootleani;
     public bool backup = true, gravityfix;
-    public static bool bodydisengaged = false, gameover = false;
+    public static bool bodydisengaged = false, gameover = false, firsttime = true;
     public float stuntimer = 5, gameovertimer = 5, timesup;
     public Movement_script MovementScript;
     
@@ -33,25 +33,33 @@ public class onbalance_script : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(savedHS);
-        Debug.Log(EndTimer);
-        Debug.Log(Thehighscore);
-        
         //tracks and displays: meters and high score
-        miles = (float)((Mathf.Round(body.transform.position.x * 10)) / 10.0);
+        miles = (float)(Mathf.Round(body.transform.position.x * 10) / 10.0);
         milestext.text = "Miles: " + miles+ "m";
         
         EndTimer += Time.deltaTime;
         Timertext.text = "Time: " + EndTimer.ToString("F");
         highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
-        
+
+
+        if (firsttime)
+        {
+           Thehighscore = savedHS;
+           highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
+
+           firsttime = false;
+        }
+        else if (!firsttime)
+        {
+            
+        }
         
         
         // if (EndTimer < PlayerPrefs.GetFloat("highscore", Thehighscore))
         // {
         //     PlayerPrefs.SetFloat("highscore", Thehighscore);
         // }
-        
+        //
         
         // if (miles > PlayerPrefs.GetFloat("highscore", 0))
         // {
@@ -74,7 +82,6 @@ public class onbalance_script : MonoBehaviour
 
         if (gameovertimer <= 0)
         {
-            savedHS = PlayerPrefs.GetFloat("highscore", EndTimer);
             SceneManager.LoadScene("Gameplay");
             bodydisengaged = false;
             gameover = false;
