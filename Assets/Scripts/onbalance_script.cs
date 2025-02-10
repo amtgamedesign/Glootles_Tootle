@@ -58,7 +58,6 @@ public class onbalance_script : MonoBehaviour
         
         if (gameover == true)
         {
-            glootleani2.Play("Glootle_perish");
             MovementScript.enabled = false;
             balhead.enabled = false;
             balURL.enabled = false;
@@ -81,8 +80,6 @@ public class onbalance_script : MonoBehaviour
 
         if (bodydisengaged == true)
         {
-            glootleani2.enabled = true;
-            glootleani2.Play("Glootle_WalkLeft");
             balhead.enabled = false;
             balURL.enabled = false;
             balLLL.enabled = false;
@@ -110,7 +107,6 @@ public class onbalance_script : MonoBehaviour
             stuntimer = 3;
             MovementScript.enabled = true;
             gravityfix = true;
-            glootleani2.enabled = false;
         }
 
         if (gravityfix == true)

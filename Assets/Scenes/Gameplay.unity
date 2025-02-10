@@ -1532,7 +1532,7 @@ MonoBehaviour:
   balLRL: {fileID: 1417871337}
   balhead: {fileID: 1576178459}
   glootleani: {fileID: 210386376}
-  glootleani2: {fileID: 660697655}
+  glootleani2: {fileID: 0}
   backup: 1
   gravityfix: 0
   stuntimer: 3
@@ -3284,7 +3284,6 @@ GameObject:
   - component: {fileID: 660697654}
   - component: {fileID: 660697653}
   - component: {fileID: 660697652}
-  - component: {fileID: 660697655}
   m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
@@ -3404,27 +3403,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &660697655
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660697651}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8fc286b7361b041459720388167f34e3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &714781594
 GameObject:
   m_ObjectHideFlags: 0
