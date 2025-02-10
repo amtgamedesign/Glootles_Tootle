@@ -244,52 +244,52 @@ public class Movement_script : MonoBehaviour
 
         {
             //This is one player
-            if (Legtype == false)
-            {
-                ongroundLLL = Physics2D.OverlapCircle(playerposLLL.position, positionradius, ground);
-                if (ongroundLLL == true && Input.GetKeyDown(KeyCode.W) ||
-                    ongroundLLL == true && Input.GetKeyDown(KeyCode.Space))
-                {
-                    rb.AddForce(jump * Vector2.up);
-                }
-
-                if (inputS || inputUAR)
-                {
-                    BodyBalanceScript.targetRotation = 50;
-                    HeadBalanceScript.targetRotation = 50;
-                    leftlegbalance.targetRotation = -200;
-                    rightlegbalance.targetRotation = -200;
-
-                }
-                else if (!inputS || !inputUAR)
-                {
-                    BodyBalanceScript.targetRotation = 0;
-                    HeadBalanceScript.targetRotation = 0;
-                    leftlegbalance.targetRotation = 0;
-                    rightlegbalance.targetRotation = 0;
-                }
-
-                if (Input.GetAxisRaw("Horizontal") != 0)
-                {
-                    if (Input.GetAxis("Horizontal") > 0)
-                    {
-                        anim.Play("Glootle_WalkRight");
-                        StartCoroutine(MoveRight(legWait));
-                        facingleft = false;
-                    }
-                    else
-                    {
-                        anim.Play("Glootle_WalkLeft");
-                        StartCoroutine(MoveLeft(legWait));
-                        facingleft = true;
-                    }
-
-                }
-                else
-                {
-                    anim.Play("Glootle_idle");
-                }
-            }
+            // if (Legtype == false)
+            // {
+            //     ongroundLLL = Physics2D.OverlapCircle(playerposLLL.position, positionradius, ground);
+            //     if (ongroundLLL == true && Input.GetKeyDown(KeyCode.W) ||
+            //         ongroundLLL == true && Input.GetKeyDown(KeyCode.Space))
+            //     {
+            //         rb.AddForce(jump * Vector2.up);
+            //     }
+            //
+            //     if (inputS || inputUAR)
+            //     {
+            //         BodyBalanceScript.targetRotation = 50;
+            //         HeadBalanceScript.targetRotation = 50;
+            //         leftlegbalance.targetRotation = -200;
+            //         rightlegbalance.targetRotation = -200;
+            //
+            //     }
+            //     else if (!inputS || !inputUAR)
+            //     {
+            //         BodyBalanceScript.targetRotation = 0;
+            //         HeadBalanceScript.targetRotation = 0;
+            //         leftlegbalance.targetRotation = 0;
+            //         rightlegbalance.targetRotation = 0;
+            //     }
+            //
+            //     if (Input.GetAxisRaw("Horizontal") != 0)
+            //     {
+            //         if (Input.GetAxis("Horizontal") > 0)
+            //         {
+            //             anim.Play("Glootle_WalkRight");
+            //             StartCoroutine(MoveRight(legWait));
+            //             facingleft = false;
+            //         }
+            //         else
+            //         {
+            //             anim.Play("Glootle_WalkLeft");
+            //             StartCoroutine(MoveLeft(legWait));
+            //             facingleft = true;
+            //         }
+            //
+            //     }
+            //     else
+            //     {
+            //         anim.Play("Glootle_idle");
+            //     }
+            // }
         }
 
     }

@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class onbalance_script : MonoBehaviour
 {
     public Balance_script balULL, balLLL, balbody, balURL, balLRL, balhead;
-    public Animator glootleani, glootleani2;
+    public Animator glootleani;
     public bool backup = true, gravityfix;
     public static bool bodydisengaged = false, gameover = false, firsttime = true;
     public float stuntimer = 5, gameovertimer = 5, timesup;
@@ -25,11 +25,10 @@ public class onbalance_script : MonoBehaviour
     {
         // PlayerPrefs.SetInt("highscore",0);
         EndTimer = 0;
-       glootleani2.enabled = false;
     }
     
 
-    void Update()
+    void FixedUpdate()
     {
         Debug.Log(Thehighscore);
         Debug.Log(savedHS);
@@ -58,6 +57,7 @@ public class onbalance_script : MonoBehaviour
         
         if (gameover == true)
         {
+            glootleani.Play("Glootle_perish");
             MovementScript.enabled = false;
             balhead.enabled = false;
             balURL.enabled = false;
@@ -80,6 +80,7 @@ public class onbalance_script : MonoBehaviour
 
         if (bodydisengaged == true)
         {
+            glootleani.Play("Glootle_perish");
             balhead.enabled = false;
             balURL.enabled = false;
             balLLL.enabled = false;
@@ -92,7 +93,7 @@ public class onbalance_script : MonoBehaviour
         }
         
         if (stuntimer <= 0)
-        { 
+        {
             backup = true;
             bodydisengaged = false;
             balhead.enabled =true;
