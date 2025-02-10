@@ -206,6 +206,7 @@ public class Movement_script : MonoBehaviour
             //Right leg Right
             else if (inputRAR && !inputD)
             {
+      
                 anim.Play("Glootle_RightfootRight");
                 StartCoroutine(MoveRightfootRight(legWait));
                 facingleft = false;
