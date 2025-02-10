@@ -17,42 +17,31 @@ public class onbalance_script : MonoBehaviour
     
     public GameObject body;
     public TextMeshPro milestext, highscoretext, Timertext;
-    public float miles, EndTimer, Thehighscore, savedHS;
+    public float miles;
+    public static float EndTimer, Thehighscore, savedHS;
     // Update is called once per frame
 
     public void Start()
     {
         // PlayerPrefs.SetInt("highscore",0);
-        Thehighscore = PlayerPrefs.GetFloat("highscore", savedHS);
+        EndTimer = 0;
     }
+    
 
-    public void Update()
+    void Update()
     {
-        //PlayerPrefs.DeleteAll();
-    }
-
-    void FixedUpdate()
-    {
+        Debug.Log(Thehighscore);
+        Debug.Log(savedHS);
+        Debug.Log(EndTimer);
+        Debug.Log(firsttime);
         //tracks and displays: meters and high score
         miles = (float)(Mathf.Round(body.transform.position.x * 10) / 10.0);
         milestext.text = "Miles: " + miles+ "m";
         
         EndTimer += Time.deltaTime;
+        savedHS = EndTimer;
         Timertext.text = "Time: " + EndTimer.ToString("F");
-        highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
-
-
-        if (firsttime)
-        {
-           Thehighscore = savedHS;
-           highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
-
-           firsttime = false;
-        }
-        else if (!firsttime)
-        {
-            
-        }
+        highscoretext.text = "High Score: " + Thehighscore.ToString("F");
         
         
         // if (EndTimer < PlayerPrefs.GetFloat("highscore", Thehighscore))
@@ -86,6 +75,7 @@ public class onbalance_script : MonoBehaviour
             bodydisengaged = false;
             gameover = false;
             gameovertimer = 5;
+            timerHighscore();
         }
 
         if (bodydisengaged == true)
@@ -137,9 +127,30 @@ public class onbalance_script : MonoBehaviour
             stuntimer -= Time.deltaTime;
         }
         
+        
     }
-    
-    
+
+    public void timerHighscore()
+    {
+        if (firsttime)
+        {
+            savedHS = Thehighscore;
+            highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
+            PlayerPrefs.SetFloat("Highscore",savedHS);
+            firsttime = false;
+        }
+        else if (EndTimer < savedHS)
+        {
+            savedHS = Thehighscore;
+            highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
+            PlayerPrefs.SetFloat("Highscore", savedHS);
+        }
+        else
+        {
+            highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
+            PlayerPrefs.SetFloat("highscore", savedHS);
+        }
+    }
     
     
 }
