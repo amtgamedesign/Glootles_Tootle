@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: -9044818066628449452}
-  xfloat: -1
+  xfloat: 0
   yfloat: 0
   ydestroy: 0
   xdestroy: 0
