@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnerani: {fileID: 1456252920609818117}
   shottimerrestart: 7
-  animationstart: 0
+  animationstart: 2
   shot: {fileID: 3523186358531799829, guid: 25a9661e15e14794296bb0fbaf7e4fcc, type: 3}
 --- !u!95 &1456252920609818117
 Animator:

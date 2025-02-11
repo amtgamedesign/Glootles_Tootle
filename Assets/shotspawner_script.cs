@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class shotspawner_script : MonoBehaviour
 {
-    private float shottimer;
+    public float shottimer;
     public Animator spawnerani;
     public int shottimerrestart, animationstart;
     public GameObject shot;
@@ -15,7 +15,7 @@ public class shotspawner_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shottimer = Random.Range(1,10);
+        shottimer = Random.Range(2,10);
     }
 
     // Update is called once per frame
@@ -25,9 +25,12 @@ public class shotspawner_script : MonoBehaviour
 
         if (shottimer < animationstart)
         {
-            spawnerani.Play("");
+            spawnerani.Play("warningshot_animation");
         }
-        
+        else
+        {
+            spawnerani.Play("Idle_warning");
+        }
         
         if (shottimer <= 0)
         {
