@@ -83,7 +83,7 @@ public class onbalance_script : MonoBehaviour
             timerHighscore();
         }
 
-        if (bodydisengaged == true)
+        if (bodydisengaged == true && gameover == false)
         {
             glootleani.Play("Glootle_stunned");
             balhead.enabled = false;
