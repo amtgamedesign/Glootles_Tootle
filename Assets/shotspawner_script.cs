@@ -7,7 +7,8 @@ using Random = UnityEngine.Random;
 public class shotspawner_script : MonoBehaviour
 {
     private float shottimer;
-    public int shottimerrestart;
+    public Animator spawnerani;
+    public int shottimerrestart, animationstart;
     public GameObject shot;
     
     
@@ -21,6 +22,13 @@ public class shotspawner_script : MonoBehaviour
     void FixedUpdate()
     {
         shottimer -= Time.deltaTime;
+
+        if (shottimer < animationstart)
+        {
+            spawnerani.Play("");
+        }
+        
+        
         if (shottimer <= 0)
         {
             shottimer = shottimerrestart;
