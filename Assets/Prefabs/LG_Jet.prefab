@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 5201978273688206096}
-  xfloat: -3
+  xfloat: -2
   yfloat: 0
   ydestroy: -5
   xdestroy: -25

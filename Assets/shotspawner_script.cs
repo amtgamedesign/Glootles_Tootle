@@ -35,7 +35,7 @@ public class shotspawner_script : MonoBehaviour
         if (shottimer <= 0)
         {
             shottimer = shottimerrestart;
-            Instantiate(shot, transform.position, quaternion.identity);
+            Instantiate(shot, new Vector3(transform.position.x,transform.position.y + 10, transform.position.z), quaternion.identity);
         }
     }
 }
