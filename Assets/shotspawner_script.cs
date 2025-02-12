@@ -6,16 +6,16 @@ using Random = UnityEngine.Random;
 
 public class shotspawner_script : MonoBehaviour
 {
-    public float shottimer;
+    public float shottimer, animationstart;
     public Animator spawnerani;
-    public int shottimerrestart, animationstart;
+    public int shottimerrestart;
     public GameObject shot;
     
     
     // Start is called before the first frame update
     void Start()
     {
-        shottimer = Random.Range(2,10);
+        shottimer = Random.Range(3f,7f);
     }
 
     // Update is called once per frame

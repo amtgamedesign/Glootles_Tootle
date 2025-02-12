@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shottimer: 0
+  animationstart: 1.15
   spawnerani: {fileID: 1456252920609818117}
   shottimerrestart: 7
-  animationstart: 2
   shot: {fileID: 3523186358531799829, guid: 25a9661e15e14794296bb0fbaf7e4fcc, type: 3}
 --- !u!95 &1456252920609818117
 Animator:
@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb0c40c264bee94295a77229e32679e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tr: {fileID: 7817175799298513447}
+  Sr: {fileID: 3500517110449248317}
   RB: {fileID: -9044818066628449452}
   xfloat: 0
   yfloat: 0

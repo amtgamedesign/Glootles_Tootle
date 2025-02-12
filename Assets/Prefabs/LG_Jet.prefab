@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb0c40c264bee94295a77229e32679e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tr: {fileID: 4889967203406631388}
+  Sr: {fileID: 3963596879125653187}
   RB: {fileID: 5201978273688206096}
   xfloat: -2
   yfloat: 0
