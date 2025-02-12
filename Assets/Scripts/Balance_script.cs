@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Object = System.Object;
 
 public class Balance_script : MonoBehaviour
 {
@@ -34,6 +36,10 @@ public class Balance_script : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
+        
+        
+        
+        
     }
 
     public void OnTriggerStay2D(Collider2D other)
@@ -60,6 +66,13 @@ public class Balance_script : MonoBehaviour
             {
                 onbalance_script.bodydisengaged = true;
             }
+        }
+        
+        Win_script win = other.gameObject.GetComponent<Win_script>();
+        if (win != null)
+        {
+            SceneManager.LoadScene("Ending");
+
         }
 
     }
