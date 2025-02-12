@@ -6082,10 +6082,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1022956408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 359.37924, y: 251.40668}
-  m_SizeDelta: {x: 5.7206, y: 1.1431}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -222, y: -45}
+  m_SizeDelta: {x: 7.87, y: 1.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066270960
 MonoBehaviour:
@@ -6134,8 +6134,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12030,10 +12030,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1022956408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -353.02792, y: 249.81885}
-  m_SizeDelta: {x: 5.7206, y: 1.1431}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 162, y: -45}
+  m_SizeDelta: {x: 5.720581, y: 1.1430969}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998960462
 MonoBehaviour:
@@ -12082,8 +12082,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12814,10 +12814,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1022956408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.756636, y: 246.64319}
-  m_SizeDelta: {x: 5.7206, y: 1.1431}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -62.25, y: -45}
+  m_SizeDelta: {x: 6.62, y: 1.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2133260899
 MonoBehaviour:
@@ -12866,8 +12866,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
