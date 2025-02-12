@@ -16,8 +16,7 @@ public class Movement_script : MonoBehaviour
     public Rigidbody2D rightLegRB;
     public Balance_script BodyBalanceScript, leftlegbalance, rightlegbalance;
     public Balance_script HeadBalanceScript;
-
-  //  public SpriteRenderer headsr, bodysr, ullsp, lllsp, urlsp, lrlsp;
+    
     
     
     //Animator
@@ -217,6 +216,8 @@ public class Movement_script : MonoBehaviour
             {
                 anim.Play("Glootle_idle");
             }
+            
+            
             
             //Bending
             if (inputS && inputDAR)

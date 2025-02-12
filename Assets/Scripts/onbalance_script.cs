@@ -11,16 +11,17 @@ public class onbalance_script : MonoBehaviour
     public Balance_script balULL, balLLL, balbody, balURL, balLRL, balhead;
     public Animator glootleani;
     public bool backup = true, gravityfix;
-    public static bool bodydisengaged = false, gameover = false, firsttime = true;
-    public float stuntimer = 5, gameovertimer = 5, timesup;
+    public static bool bodydisengaged = false, gameover = false, firsttime = true, Invi = false;
+    public float stuntimer = 5, gameovertimer = 5, timesup, invitimer;
     public Movement_script MovementScript;
     
     public GameObject body;
     public TextMeshPro milestext, highscoretext, Timertext;
     public float miles;
-    public static float EndTimer, Thehighscore, savedHS = 10000000;
+    public static float EndTimer, Thehighscore, savedHS;
     // Update is called once per frame
-
+    
+    
     public void Start()
     {
         // PlayerPrefs.SetInt("highscore",0);
@@ -29,6 +30,7 @@ public class onbalance_script : MonoBehaviour
         bodydisengaged = false;
         timesup = 3;
         gameover = false;
+        invitimer = 2.5f;
     }
     
 
@@ -115,6 +117,7 @@ public class onbalance_script : MonoBehaviour
             stuntimer = 3;
             MovementScript.enabled = true;
             gravityfix = true;
+            Invi = true;
         }
 
         if (gravityfix == true)
@@ -122,6 +125,17 @@ public class onbalance_script : MonoBehaviour
             timesup -= .1f;
         }
 
+        if (Invi == true)
+        {
+            invitimer -= Time.deltaTime;
+        }
+       
+        if (invitimer <= 0)
+        {
+            Invi = false;
+            invitimer = 2.5f;
+        }
+        
         if (timesup <= 0)
         {
             MovementScript.rb.gravityScale = 1;

@@ -67,7 +67,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c9eb8b2dc55d96f47ac0dac508108743, type: 3}
   - {fileID: 21300000, guid: 8f9696c6b021471488481f96a414cdcd, type: 3}
   - {fileID: 21300000, guid: 8982f229a156bef48910e78f3fbbf1c0, type: 3}
-  - {fileID: 21300000, guid: 243b67e538ae6f44e94c76566d6bf419, type: 3}
+  - {fileID: 21300000, guid: eb62db00e420b3d41af2aa0335e27ed4, type: 3}
+  - {fileID: 21300000, guid: eb62db00e420b3d41af2aa0335e27ed4, type: 3}
+  - {fileID: 21300000, guid: 8982f229a156bef48910e78f3fbbf1c0, type: 3}
+  - {fileID: 21300000, guid: 8f9696c6b021471488481f96a414cdcd, type: 3}
   randomnumber: 0
   min: 0
   max: 4
