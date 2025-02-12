@@ -6,22 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class StartScript : MonoBehaviour
 {
-    public Animator anim;
+    public Animator glootleAnim;
+    public Animator titleAnim;
+
+    public void Start()
+    {
+        titleAnim.Play("TitleGoop");
+    }
     
     public void StartGame()
     {
-        Debug.Log("waiting");
-        StartCoroutine(Wait());
         StartCoroutine(ShakeScreen());
-        anim.Play("GlootleCrash");
-        //StartCoroutine(Wait());
-        //SceneManager.LoadScene("Gameplay");
+        glootleAnim.Play("GlootleCrash");
+        StartCoroutine(Wait());
     }
 
     public IEnumerator ShakeScreen()
     {
-        yield return new WaitForSeconds(1f);
-        anim.Play("Shake");
+        yield return new WaitForSeconds(2.5f);
+        titleAnim.Play("Shake");
     }
     
     
