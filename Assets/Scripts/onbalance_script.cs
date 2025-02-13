@@ -175,6 +175,11 @@ public class onbalance_script : MonoBehaviour
             PlayerPrefs.SetFloat("highscore", savedHS);
         }
     }
-    
-    
+
+
+    public void textcrash()
+    {
+        
+    }
+
 }

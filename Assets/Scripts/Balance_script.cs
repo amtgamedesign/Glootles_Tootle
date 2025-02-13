@@ -13,6 +13,8 @@ public class Balance_script : MonoBehaviour
     public float force;
     public Balance_script BalanceScript;
     public onbalance_script OnbalanceScript;
+    public GameObject textprefab;
+    
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -33,6 +35,7 @@ public class Balance_script : MonoBehaviour
             if (onbalance_script.Invi == false)
             {
                 onbalance_script.bodydisengaged = true;
+                Instantiate(textprefab,transform.position,Quaternion.identity);
             }
             Destroy(other.gameObject);
         }
@@ -58,6 +61,7 @@ public class Balance_script : MonoBehaviour
             stuntrigger_script stuntriggerScript = other.gameObject.GetComponent<stuntrigger_script>();
             if (stuntriggerScript != null)
             {
+                Instantiate(textprefab,transform.position,Quaternion.identity);
                 onbalance_script.bodydisengaged = true;
             }
 

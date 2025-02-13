@@ -22,17 +22,17 @@ public class mulittext_script : MonoBehaviour
         if (randomnumber == 1)
         {
             ani.Play("Crash");
-            Invoke("OnDestroy", 1f);
+            Invoke("OnDestroy", 2f);
         }
         else if (randomnumber == 2)
         {
             ani.Play("Smack");
-            Invoke("OnDestroy", 1f);
+            Invoke("OnDestroy", 2f);
         }
         else if (randomnumber == 3)
         {
             ani.Play("Boom");
-            Invoke("OnDestroy", 1f);
+            Invoke("OnDestroy", 2f);
         }
         
     }
