@@ -66,7 +66,6 @@ public class onbalance_script : MonoBehaviour
         
         if (gameover == true)
         {
-            timerHighscore();
             glootleani.Play("Glootle_perish");
             MovementScript.enabled = false;
             balhead.enabled = false;

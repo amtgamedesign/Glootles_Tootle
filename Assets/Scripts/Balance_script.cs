@@ -12,7 +12,7 @@ public class Balance_script : MonoBehaviour
     public Rigidbody2D rb;
     public float force;
     public Balance_script BalanceScript;
-
+    public onbalance_script OnbalanceScript;
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -68,11 +68,12 @@ public class Balance_script : MonoBehaviour
             }
         }
         
+        
         Win_script win = other.gameObject.GetComponent<Win_script>();
         if (win != null)
         {
             SceneManager.LoadScene("Ending");
-
+            OnbalanceScript.timerHighscore();
         }
 
     }
