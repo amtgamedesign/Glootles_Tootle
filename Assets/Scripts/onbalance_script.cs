@@ -176,10 +176,6 @@ public class onbalance_script : MonoBehaviour
         }
     }
 
-
-    public void textcrash()
-    {
-        
-    }
+    
 
 }
