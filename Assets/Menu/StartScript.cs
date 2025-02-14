@@ -8,6 +8,7 @@ public class StartScript : MonoBehaviour
 {
     public Animator glootleAnim;
     public Animator titleAnim;
+    public Animator crashAnim;
 
     public void Start()
     {
@@ -17,6 +18,7 @@ public class StartScript : MonoBehaviour
     public void StartGame()
     {
         StartCoroutine(ShakeScreen());
+        StartCoroutine(Crash());
         glootleAnim.Play("GlootleCrash");
         StartCoroutine(Wait());
     }
@@ -26,7 +28,12 @@ public class StartScript : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         titleAnim.Play("Shake");
     }
-    
+
+    public IEnumerator Crash()
+    {
+        yield return new WaitForSeconds(2f);
+        crashAnim.Play("CrashSound");
+    }
     
     public IEnumerator Wait()
     {
