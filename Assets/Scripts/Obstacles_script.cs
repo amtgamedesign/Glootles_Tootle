@@ -32,7 +32,7 @@ public class Obstacles_script : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         Reverse_script reverse = other.gameObject.GetComponent<Reverse_script>();
         if (reverse != null)

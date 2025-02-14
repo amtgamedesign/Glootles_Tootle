@@ -115,7 +115,7 @@ MonoBehaviour:
   tr: {fileID: 4349297875438654641}
   Sr: {fileID: 2949274736623559824}
   RB: {fileID: -828449991683313772}
-  xfloat: -1
+  xfloat: -1.5
   yfloat: 0
   ydestroy: -5
   xdestroy: -25

@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb0c40c264bee94295a77229e32679e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: {fileID: 0}
-  Sr: {fileID: 0}
+  tr: {fileID: 3436970436011025189}
+  Sr: {fileID: 4898967030766385526}
   RB: {fileID: -454245441957763802}
   xfloat: 0
   yfloat: -13
