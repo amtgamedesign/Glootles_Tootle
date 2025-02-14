@@ -156,7 +156,14 @@ public class onbalance_script : MonoBehaviour
     {
         if (firsttime)
         {
-            savedHS = Thehighscore;
+            //Makes the current score the highscore if first time playing
+            //Debug.Log("first time");
+            //Debug.Log(EndTimer);
+            savedHS = EndTimer;
+            //I switched the order of savedHS = Thehighscore to Thehighscore = savedHS
+            //This ensures that Thehighscore variable is the one being updated (since it's used in player prefs)
+            //And because savedHS already has the value of the current score
+            Thehighscore = savedHS;
             highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
             PlayerPrefs.SetFloat("Highscore",savedHS);
             firsttime = false;
@@ -167,6 +174,8 @@ public class onbalance_script : MonoBehaviour
             {
                 savedHS = Thehighscore;
             }
+            //Sets highscore to current time if the current time is lower than the previous time
+            Thehighscore = EndTimer;
             highscoretext.text = $"High Score: {Thehighscore.ToString("F")}";
             PlayerPrefs.SetFloat("Highscore", savedHS);
         }

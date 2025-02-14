@@ -104,8 +104,8 @@ public class Balance_script : MonoBehaviour
         Win_script win = other.gameObject.GetComponent<Win_script>();
         if (win != null)
         {
-            SceneManager.LoadScene("Ending");
             OnbalanceScript.timerHighscore();
+            SceneManager.LoadScene("Ending");
         }
 
     }
