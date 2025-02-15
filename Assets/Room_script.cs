@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Room_script : MonoBehaviour
 {
-    public string desiredscene;
+    public string desiredscene, Thescene, currentscenename;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +29,13 @@ public class Room_script : MonoBehaviour
             SceneManager.LoadScene(desiredscene);
         }
 
+    }
+
+    public void OnMouseDown()
+    {
+        if (currentscenename == Thescene)
+        {
+            SceneManager.LoadScene(desiredscene);
+        }
     }
 }
