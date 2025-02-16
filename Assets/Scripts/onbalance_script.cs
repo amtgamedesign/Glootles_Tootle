@@ -52,7 +52,6 @@ public class onbalance_script : MonoBehaviour
         Timertext.text = "Time: " + EndTimer.ToString("F");
         highscoretext.text = "High Score: " + Thehighscore.ToString("F");
         
-        
         // if (EndTimer < PlayerPrefs.GetFloat("highscore", Thehighscore))
         // {
         //     PlayerPrefs.SetFloat("highscore", Thehighscore);

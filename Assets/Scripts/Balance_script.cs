@@ -14,7 +14,7 @@ public class Balance_script : MonoBehaviour
     public float force;
     public Balance_script BalanceScript;
     public onbalance_script OnbalanceScript;
-    public GameObject textprefab;
+    public GameObject textprefab, crashaudio, boinkaudio;
     
     private void Start()
     {
@@ -33,10 +33,8 @@ public class Balance_script : MonoBehaviour
         stun_script stunScript = other.gameObject.GetComponent<stun_script>();
         if (stunScript != null)
         {
-            if (onbalance_script.bodydisengaged == false)
-            {
                 Instantiate(textprefab,transform.position,Quaternion.identity);  
-            }
+            Instantiate(crashaudio,transform.position,Quaternion.identity);  
             Destroy(other.gameObject);
             if (onbalance_script.Invi == false)
             {
@@ -53,6 +51,7 @@ public class Balance_script : MonoBehaviour
         {
             if (onbalance_script.gameover == false)
             {
+                Instantiate(boinkaudio,transform.position,Quaternion.identity);  
                 Instantiate(textprefab,new Vector3(transform.position.x + Random.Range(-3,4),transform.position.y + Random.Range(-3,4),transform.position.z),Quaternion.identity);
                 Instantiate(textprefab,new Vector3(transform.position.x + Random.Range(-3,4),transform.position.y + Random.Range(-3,4),transform.position.z),Quaternion.identity);
                 Instantiate(textprefab,new Vector3(transform.position.x + Random.Range(-3,4),transform.position.y + Random.Range(-3,4),transform.position.z),Quaternion.identity);
@@ -74,10 +73,8 @@ public class Balance_script : MonoBehaviour
             stuntrigger_script stuntriggerScript = other.gameObject.GetComponent<stuntrigger_script>();
             if (stuntriggerScript != null)
             {
-                if (onbalance_script.bodydisengaged == false)
-                {
-                    Instantiate(textprefab,transform.position,Quaternion.identity);  
-                }
+                Instantiate(textprefab,transform.position,Quaternion.identity);  
+                Instantiate(crashaudio,transform.position,Quaternion.identity);  
                 Destroy(other.gameObject);
                 if (onbalance_script.Invi == false)
                 {
@@ -88,10 +85,8 @@ public class Balance_script : MonoBehaviour
             Shot_script shotScript = other.gameObject.GetComponent<Shot_script>();
             if (shotScript != null)
             {
-                if (onbalance_script.bodydisengaged == false)
-                {
-                    Instantiate(textprefab,transform.position,Quaternion.identity);  
-                }
+                Instantiate(textprefab,transform.position,Quaternion.identity);  
+                Instantiate(crashaudio,transform.position,Quaternion.identity);  
                 Destroy(other.gameObject);
                 if (onbalance_script.Invi == false)
                 {
