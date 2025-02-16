@@ -1111,8 +1111,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Another enemy the Jets.  Use both S and Down Arrow to bend under!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
+  m_sharedMaterial: {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1201,7 +1201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1619,8 +1619,8 @@ MonoBehaviour:
   m_text: Watch out once the fun starts the government will chase you and if they
     touch you it's gameover!!!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
+  m_sharedMaterial: {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1709,7 +1709,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2942,8 +2942,8 @@ Transform:
   m_GameObject: {fileID: 579156442}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0635, y: -0.034699917, z: 0}
-  m_LocalScale: {x: 16.833895, y: 2.5254, z: 1}
+  m_LocalPosition: {x: 0, y: -0.034699917, z: 0}
+  m_LocalScale: {x: 18.441004, y: 2.5254, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050572702}
@@ -3118,8 +3118,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.31, y: -2.64}
-  m_SizeDelta: {x: 11.1827, y: 5}
+  m_AnchoredPosition: {x: 0, y: -2.71}
+  m_SizeDelta: {x: 11.1933, y: 2.6564}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665962815
 MonoBehaviour:
@@ -3141,11 +3141,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use A and D to move the back leg.                   Use right and left
-    arrow to move the front leg!           Try moving in a rhythm.
+  m_text: Use A and D to move the back leg.                              Use right
+    and left arrow to move the front leg!         Try moving in a rhythm.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
+  m_sharedMaterial: {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3234,7 +3234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3296,8 +3296,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Press W and Up arrow at the same time to jump. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
+  m_sharedMaterial: {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3386,7 +3386,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4588,8 +4588,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tanks are slow but can be jumped over!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
+  m_sharedMaterial: {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4678,7 +4678,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5284,8 +5284,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Now you are ready for the fun!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
+  m_sharedMaterial: {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5374,7 +5374,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5525,8 +5525,8 @@ Transform:
   m_GameObject: {fileID: 1183625538}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2597, y: -2.5666, z: 0}
-  m_LocalScale: {x: 10.748898, y: 2.2629137, z: 1}
+  m_LocalPosition: {x: 0, y: -2.7019, z: 0}
+  m_LocalScale: {x: 11.117599, y: 1.9646825, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050572702}
@@ -5852,6 +5852,8 @@ MonoBehaviour:
   BalanceScript: {fileID: 1231859365}
   OnbalanceScript: {fileID: 161453713}
   textprefab: {fileID: 2099465471029425107, guid: 953dd39f51bd7994ba60a267dbe3aec8, type: 3}
+  crashaudio: {fileID: 0}
+  boinkaudio: {fileID: 0}
 --- !u!233 &1231859366
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -6486,6 +6488,8 @@ MonoBehaviour:
   BalanceScript: {fileID: 1353378761}
   OnbalanceScript: {fileID: 161453713}
   textprefab: {fileID: 2099465471029425107, guid: 953dd39f51bd7994ba60a267dbe3aec8, type: 3}
+  crashaudio: {fileID: 0}
+  boinkaudio: {fileID: 0}
 --- !u!233 &1353378762
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -7309,6 +7313,8 @@ MonoBehaviour:
   BalanceScript: {fileID: 1587960409}
   OnbalanceScript: {fileID: 161453713}
   textprefab: {fileID: 2099465471029425107, guid: 953dd39f51bd7994ba60a267dbe3aec8, type: 3}
+  crashaudio: {fileID: 0}
+  boinkaudio: {fileID: 0}
 --- !u!1 &1613260570
 GameObject:
   m_ObjectHideFlags: 0
@@ -7577,6 +7583,8 @@ MonoBehaviour:
   BalanceScript: {fileID: 1648582488}
   OnbalanceScript: {fileID: 161453713}
   textprefab: {fileID: 2099465471029425107, guid: 953dd39f51bd7994ba60a267dbe3aec8, type: 3}
+  crashaudio: {fileID: 0}
+  boinkaudio: {fileID: 0}
 --- !u!50 &1648582489
 Rigidbody2D:
   serializedVersion: 4
@@ -8314,8 +8322,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Don't forget the lasers.           They can spawn from anywhere!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
+  m_sharedMaterial: {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8404,7 +8412,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8353133915621057696, guid: fa6540b2269fa0c4a921dc52b9f2ae10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9160,6 +9168,8 @@ MonoBehaviour:
   BalanceScript: {fileID: 1957717795}
   OnbalanceScript: {fileID: 161453713}
   textprefab: {fileID: 2099465471029425107, guid: 953dd39f51bd7994ba60a267dbe3aec8, type: 3}
+  crashaudio: {fileID: 0}
+  boinkaudio: {fileID: 0}
 --- !u!50 &1957717796
 Rigidbody2D:
   serializedVersion: 4
@@ -9459,6 +9469,8 @@ MonoBehaviour:
   BalanceScript: {fileID: 1976351183}
   OnbalanceScript: {fileID: 161453713}
   textprefab: {fileID: 2099465471029425107, guid: 953dd39f51bd7994ba60a267dbe3aec8, type: 3}
+  crashaudio: {fileID: 0}
+  boinkaudio: {fileID: 0}
 --- !u!58 &1976351184
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9794,8 +9806,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Welcome to Training Your Glootle!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e95a5e56d3c6f84e971a54700364982, type: 2}
+  m_sharedMaterial: {fileID: 4955716915489349760, guid: 5e95a5e56d3c6f84e971a54700364982, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9819,8 +9831,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9884,7 +9896,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 4955716915489349760, guid: 5e95a5e56d3c6f84e971a54700364982, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
